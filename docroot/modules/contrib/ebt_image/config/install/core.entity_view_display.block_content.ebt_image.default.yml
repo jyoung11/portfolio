@@ -1,0 +1,58 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_image
+    - field.field.block_content.ebt_image.field_ebt_image
+    - field.field.block_content.ebt_image.field_ebt_image_caption
+    - field.field.block_content.ebt_image.field_ebt_image_link
+    - field.field.block_content.ebt_image.field_ebt_settings
+  module:
+    - ebt_core
+    - link
+    - media
+    - text
+id: block_content.ebt_image.default
+targetEntityType: block_content
+bundle: ebt_image
+mode: default
+content:
+  field_ebt_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ebt_image_caption:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ebt_image_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 1024
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ebt_settings:
+    type: ebt_settings_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

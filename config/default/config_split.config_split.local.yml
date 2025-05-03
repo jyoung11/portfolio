@@ -1,0 +1,18 @@
+uuid: ca018d8c-5b16-484a-9598-e05ca239217d
+langcode: en
+status: true
+dependencies: {  }
+id: local
+label: Local
+description: 'Config settings for local environments'
+folder: ../config/envs/local
+module:
+  devel: 0
+  kint: 0
+theme: {  }
+blacklist: {  }
+graylist:
+  - system.performance
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

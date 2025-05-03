@@ -1,0 +1,19 @@
+uuid: 4209ca7a-7253-49a9-a216-6545dfa5f8e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.materials_section
+id: paragraph.materials_section.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: materials_section
+label: 'Description (override)'
+description: 'Optional description to replace the referenced Document''s Description field'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

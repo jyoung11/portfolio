@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ebt_accordion.field_ebt_accordion_text
+    - field.field.paragraph.ebt_accordion.field_ebt_accordion_title
+    - paragraphs.paragraphs_type.ebt_accordion
+  module:
+    - text
+id: paragraph.ebt_accordion.default
+targetEntityType: paragraph
+bundle: ebt_accordion
+mode: default
+content:
+  field_ebt_accordion_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_ebt_accordion_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

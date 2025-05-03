@@ -1,0 +1,10 @@
+uuid: 470d7d17-4d08-438d-8eda-dbd5499ab035
+langcode: en
+status: true
+dependencies: {  }
+id: video_collection
+label: 'Video Collection'
+icon_uuid: null
+icon_default: null
+description: 'A set of one or more <em>Video Section</em> paragraph types'
+behavior_plugins: {  }

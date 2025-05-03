@@ -1,0 +1,16 @@
+type: module
+name: 'Extra Block Types (EBT): Hero'
+description: 'Adds Hero section with EBT Hero.'
+core_version_requirement: ^9.3 || ^10 || ^11
+package: 'Extra Block Types'
+
+dependencies:
+  - drupal:link
+  - drupal:media
+  - ebt_basic_button:ebt_basic_button
+  - paragraphs:paragraphs
+
+# Information added by Drupal.org packaging script on 2024-07-31
+version: '1.4.3'
+project: 'ebt_hero'
+datestamp: 1722407971

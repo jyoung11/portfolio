@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ebt_video_and_image_gallery_item.field_gallery_item_description
+    - field.field.paragraph.ebt_video_and_image_gallery_item.field_video_gallery_item
+    - paragraphs.paragraphs_type.ebt_video_and_image_gallery_item
+  module:
+    - text
+id: paragraph.ebt_video_and_image_gallery_item.default
+targetEntityType: paragraph
+bundle: ebt_video_and_image_gallery_item
+mode: default
+content:
+  field_gallery_item_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_video_gallery_item:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: video_and_image_gallery_item
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

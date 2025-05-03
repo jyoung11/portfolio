@@ -1,0 +1,10 @@
+uuid: 205270b6-0096-4c94-9a51-b47159193497
+langcode: en
+status: true
+dependencies: {  }
+id: materials_section
+label: 'Materials Section'
+icon_uuid: null
+icon_default: null
+description: 'A single piece of Portfolio material: a Document Media entity, with optional overriding title and description'
+behavior_plugins: {  }

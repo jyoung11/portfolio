@@ -1,0 +1,16 @@
+type: module
+name: 'Extra Block Types (EBT): Image'
+description: 'Adds Image block type with Media field.'
+core_version_requirement: ^9.3 || ^10 || ^11
+package: 'Extra Block Types'
+
+dependencies:
+  - ebt_core:ebt_core
+  - drupal:media
+  - drupal:link
+  - glightbox:glightbox
+
+# Information added by Drupal.org packaging script on 2024-07-31
+version: '1.4.9'
+project: 'ebt_image'
+datestamp: 1722408024

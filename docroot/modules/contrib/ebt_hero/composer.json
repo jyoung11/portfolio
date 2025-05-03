@@ -1,0 +1,17 @@
+{
+    "name": "drupal/ebt_hero",
+    "type": "drupal-module",
+    "description": "Extra Block Types (EBT): Hero",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0-or-later",
+    "homepage": "http://drupal.org/project/ebt_hero",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/ebt_hero",
+        "source": "https://git.drupalcode.org/project/ebt_hero"
+    },
+    "require": {
+        "drupal/ebt_basic_button": "^1.4",
+        "drupal/paragraphs": "^1.0"
+    }
+}

@@ -1,0 +1,75 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the ebt_image_gallery module.
+ */
+
+use Drupal\media\Entity\MediaType;
+use Symfony\Component\Yaml\Yaml;
+
+/**
+ * Implements hook_requirements().
+ */
+function ebt_image_gallery_requirements($phase) {
+  if ($phase != 'install') {
+    return [];
+  }
+
+  // Check if the Media module is enabled.
+  $module_handler = \Drupal::service('module_handler');
+  if (!$module_handler->moduleExists('media')) {
+    return [];
+  }
+
+  if (class_exists('Drupal\media\Entity\MediaType')) {
+    foreach (MediaType::loadMultiple() as $type) {
+      if ($type->id() == 'image') {
+        return [];
+      }
+    }
+  }
+  return [
+    'ebt_image_gallery_media_type_image' => [
+      'title' => t('Media type Image'),
+      'value' => t('Not created'),
+      'description' => t('The EBT Image Gallery needs to be <a href="@url">created</a> "Image" Media type.', ['@url' => '/admin/structure/media']),
+      'severity' => REQUIREMENT_ERROR,
+    ],
+  ];
+}
+
+/**
+ * Hide the body field on Block Type "EBT Image Gallery".
+ */
+function ebt_image_gallery_update_9101() {
+
+  // Get config object.
+  $config = \Drupal::configFactory()->getEditable('core.entity_form_display.block_content.ebt_image_gallery.default');
+
+  // If don't return a value, skip.
+  if (empty($config)) {
+    return;
+  }
+
+  // Get the YML file.
+  $yml_file = \Drupal::service('extension.list.module')->getPath('ebt_image_gallery') . '/config/install/core.entity_form_display.block_content.ebt_image_gallery.default.yml';
+
+  // Parse to config data.
+  $config_data = Yaml::parseFile($yml_file);
+
+  // Set the settings data.
+  $config->setData($config_data);
+
+  // Save the object.
+  $config->save();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function ebt_image_gallery_uninstall() {
+
+  \Drupal::messenger()->addStatus(t('The EBT Image Gallery has been uninstalled, but the Block Type have not been deleted for consistency reasons. If needed, you can manually remove them by going to Structure » Block layout » Custom block library'));
+
+}

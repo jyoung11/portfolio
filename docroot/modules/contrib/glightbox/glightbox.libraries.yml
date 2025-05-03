@@ -1,0 +1,38 @@
+glightbox:
+  remote: https://github.com/levmyshkin/glightbox
+  version: VERSION
+  license:
+    name: MIT
+    gpl-compatible: false
+    url: https://github.com/biati-digital/glightbox/blob/master/LICENSE.md
+  css:
+    theme:
+      /libraries/glightbox/dist/css/glightbox.min.css: { }
+  js:
+    /libraries/glightbox/dist/js/glightbox.min.js: { minified: true }
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/once
+
+glightbox-dev:
+  remote: https://github.com/levmyshkin/glightbox
+  version: VERSION
+  license:
+    name: MIT
+    gpl-compatible: false
+    url: https://github.com/biati-digital/glightbox/blob/master/LICENSE.md
+  css:
+    theme:
+      /libraries/glightbox/dist/css/glightbox.css: { }
+  js:
+    /libraries/glightbox/dist/js/glightbox.js: { }
+  dependencies:
+    - core/once
+
+init:
+  version: VERSION
+  js:
+    js/glightbox.js: {}
+  dependencies:
+    - core/drupal

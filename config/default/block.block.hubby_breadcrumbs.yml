@@ -1,0 +1,22 @@
+uuid: 88f35d65-f362-4d0b-b07f-38d2f15220f5
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - hubby
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: hubby_breadcrumbs
+theme: hubby
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

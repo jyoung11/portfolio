@@ -1,0 +1,17 @@
+uuid: f5356297-b21e-4310-bd90-0e441d727fe0
+langcode: en
+status: true
+dependencies: {  }
+id: dev
+label: Dev
+description: 'Config settings for Acquia Cloud DEV environment'
+folder: ../config/envs/dev
+module: {  }
+theme: {  }
+blacklist:
+  - shield.settings
+graylist:
+  - system.performance
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

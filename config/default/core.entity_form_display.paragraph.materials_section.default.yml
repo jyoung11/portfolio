@@ -1,0 +1,42 @@
+uuid: e52a5796-81fc-4994-a7d6-59fed43eb6db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.materials_section.field_description
+    - field.field.paragraph.materials_section.field_document
+    - field.field.paragraph.materials_section.field_title
+    - paragraphs.paragraphs_type.materials_section
+  module:
+    - media_library
+id: paragraph.materials_section.default
+targetEntityType: paragraph
+bundle: materials_section
+mode: default
+content:
+  field_description:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_document:
+    weight: 2
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

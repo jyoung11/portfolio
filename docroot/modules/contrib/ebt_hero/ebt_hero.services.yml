@@ -1,0 +1,4 @@
+services:
+  ebt_hero.generate_hero_css:
+    class: Drupal\ebt_hero\Services\GenerateHeroCSS
+    arguments: ['@config.factory']

@@ -1,0 +1,8 @@
+uuid: e9db2fc4-b681-4a7f-b1ce-957b50957945
+langcode: en
+status: true
+dependencies: {  }
+name: 'Client Name'
+vid: client_name
+description: 'Lists client names for Portfolio Pages'
+weight: 0

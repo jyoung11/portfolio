@@ -1,0 +1,23 @@
+uuid: 0777fdd1-f72f-41d2-b501-554e14b6e0a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_theme
+    - node.type.portfolio_page
+  module:
+    - options
+id: node.portfolio_page.field_header_theme
+field_name: field_header_theme
+entity_type: node
+bundle: portfolio_page
+label: 'Header Theme'
+description: 'Choose the header theme based on the client logo'
+required: true
+translatable: false
+default_value:
+  -
+    value: orange
+default_value_callback: ''
+settings: {  }
+field_type: list_string

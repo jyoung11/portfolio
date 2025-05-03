@@ -1,0 +1,23 @@
+uuid: 6c307cba-fc2d-418c-9a9d-633d5b04fd97
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: KnsWOwLsIpkA7e8-bByOBU-y8FOd6Hjbw0tYPe2EhKQ
+id: media.field_bex_threeplay_media_id
+field_name: field_bex_threeplay_media_id
+entity_type: media
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

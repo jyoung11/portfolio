@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ebt_accordion_title
+    - paragraphs.paragraphs_type.ebt_accordion
+  module:
+    - text
+id: paragraph.ebt_accordion.field_ebt_accordion_title
+field_name: field_ebt_accordion_title
+entity_type: paragraph
+bundle: ebt_accordion
+label: 'Title / Question'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

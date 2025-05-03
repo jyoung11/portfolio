@@ -1,0 +1,21 @@
+uuid: 35c5dd03-af35-48bf-9274-72784f3aaf5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_aspect_ratio
+    - media.type.remote_video
+  module:
+    - options
+id: media.remote_video.field_aspect_ratio
+field_name: field_aspect_ratio
+entity_type: media
+bundle: remote_video
+label: 'Aspect Ratio'
+description: 'Select the aspect ratio of this video. This ensures a correct fit into the page so that the video fills up the available space without gaps on sides or above/below.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

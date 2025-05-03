@@ -1,0 +1,10 @@
+uuid: e257a425-a5d9-4d33-bbd7-1237a86ccc37
+langcode: en
+status: true
+dependencies: {  }
+id: video_section
+label: 'Video Section'
+icon_uuid: null
+icon_default: null
+description: 'A single Portfolio video: a Brightcove Video Media entity or a Remote Video (e.g. Vimeo URL) with optional overriding title and description'
+behavior_plugins: {  }

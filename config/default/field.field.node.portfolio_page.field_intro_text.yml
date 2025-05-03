@@ -1,0 +1,24 @@
+uuid: ba090597-7426-4996-b896-d99c381b6453
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_intro_text
+    - node.type.portfolio_page
+  module:
+    - text
+id: node.portfolio_page.field_intro_text
+field_name: field_intro_text
+entity_type: node
+bundle: portfolio_page
+label: 'Intro Text'
+description: 'The text to appear below the title'
+required: false
+translatable: false
+default_value:
+  -
+    value: "<p>The more you know, the easier it is to get your medication and find ways to save. Explore the videos and downloadables below to learn how to make the most of your Rx plan.</p>\r\n\r\n<p><strong><a href=\"https://caremark.com\">Caremark.com</a>&nbsp; &nbsp; &nbsp; <a href=\"https://www.cvsspecialty.com/wps/portal/specialty\">CVSspecialty.com</a></strong></p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

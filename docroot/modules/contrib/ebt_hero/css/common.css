@@ -1,0 +1,19 @@
+.ebt-hero .buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.ebt-hero .field--name-field-ebt-hero-link {
+  margin-bottom: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+.ebt-hero .field--name-field-ebt-hero-link.field:not(:last-child) {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+.ebt-hero .field--name-field-ebt-hero-title-prefix {
+  text-transform: uppercase;
+}

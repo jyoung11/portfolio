@@ -1,0 +1,19 @@
+uuid: fb2a2072-b0a3-407a-b2f2-0fe0a2aeb792
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.materials_section
+id: paragraph.materials_section.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: materials_section
+label: 'Title (override)'
+description: 'Optional title to replace the referenced Document''s Title field'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the EBT Stats.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function ebt_stats_uninstall() {
+
+  \Drupal::logger('ebt_stats')->notice(t('The EBT Stats has been uninstalled, but the Block Type have not been deleted for consistency reasons. If needed, you can manually remove them by going to Structure » Block layout » Custom block library'));
+
+}

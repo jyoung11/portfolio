@@ -1,0 +1,42 @@
+uuid: 07d3c5f6-048f-4d4c-ba9e-93ddf4189c86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_portfolio_contents
+    - node.type.portfolio_page
+    - paragraphs.paragraphs_type.materials_collection
+    - paragraphs.paragraphs_type.video_collection
+  module:
+    - entity_reference_revisions
+id: node.portfolio_page.field_portfolio_contents
+field_name: field_portfolio_contents
+entity_type: node
+bundle: portfolio_page
+label: 'Portfolio Contents'
+description: 'Select a <em>Video Collection</em> and a <em>Materials Collection</em>, with the ability to order the two in either way'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      materials_collection: materials_collection
+      video_collection: video_collection
+    target_bundles_drag_drop:
+      materials_collection:
+        enabled: true
+        weight: 5
+      materials_section:
+        weight: 6
+        enabled: false
+      video_collection:
+        enabled: true
+        weight: 7
+      video_section:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

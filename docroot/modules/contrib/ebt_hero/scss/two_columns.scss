@@ -1,0 +1,13 @@
+.ebt-hero.two_columns {
+  .ebt-container {
+    .ebt-hero-container {
+      display: flex;
+      justify-content: space-between;
+      row-gap: 20px;
+      column-gap: 20px;
+    }
+  }
+  .hero-col-2 {
+    width: 55%;
+  }
+}

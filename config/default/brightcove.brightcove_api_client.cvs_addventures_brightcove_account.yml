@@ -1,0 +1,11 @@
+uuid: 65afba9f-cf06-4852-bf38-0b7faa37a9e8
+langcode: en
+status: false
+dependencies: {  }
+id: cvs_addventures_brightcove_account
+label: 'CVS-Addventures Brightcove Account'
+account_id: '844354896001'
+client_id: 8b87f955-aeb6-4f4a-9f96-65d29207645a
+default_player: b6qupDL2r
+secret_key: rVtgbgcDvFH_n70vsvJ7b5rb6_whB7_6qfVdIsZ-9jQRX7HhPwoR_SHWn0tA2yLYnUeCcX-BcggFk2GhlaXkVg
+max_custom_fields: 10

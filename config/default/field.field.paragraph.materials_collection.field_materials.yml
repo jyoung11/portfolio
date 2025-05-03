@@ -1,0 +1,40 @@
+uuid: 8a42823e-739a-4cf3-a0fa-6834629e7090
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_materials
+    - paragraphs.paragraphs_type.materials_collection
+    - paragraphs.paragraphs_type.materials_section
+  module:
+    - entity_reference_revisions
+id: paragraph.materials_collection.field_materials
+field_name: field_materials
+entity_type: paragraph
+bundle: materials_collection
+label: Material(s)
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      materials_section: materials_section
+    target_bundles_drag_drop:
+      materials_collection:
+        weight: 3
+        enabled: false
+      materials_section:
+        enabled: true
+        weight: 4
+      video_collection:
+        weight: 7
+        enabled: false
+      video_section:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

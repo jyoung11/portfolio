@@ -1,0 +1,17 @@
+uuid: 0492a837-0ca9-456d-a585-73972736fdb0
+langcode: en
+status: true
+dependencies: {  }
+id: stage
+label: Stage
+description: 'Config settings for Acquia Cloud Staging environment'
+folder: ../config/envs/stage
+module: {  }
+theme: {  }
+blacklist:
+  - shield.settings
+graylist:
+  - system.performance
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

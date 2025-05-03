@@ -1,0 +1,4 @@
+ebt_image_gallery:
+  css:
+    component:
+      css/ebt_image_gallery.css: {}

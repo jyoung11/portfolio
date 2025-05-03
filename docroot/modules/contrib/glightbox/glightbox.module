@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * A light-weight, customizable lightbox plugin.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function glightbox_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.glightbox':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('GLightbox is a pure javascript lightbox. It can display images, iframes, inline content and videos with optional autoplay for YouTube, Vimeo and even self hosted videos.') . '</p>';
+      $output .= '<h3>' . t('Configuration') . '</h3>';
+      $output .= '<p>' . t('Go to "Configuration" -> "Media" -> "GLightbox" to find all the configuration options.') . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function glightbox_theme() {
+  return [
+    'glightbox_formatter' => [
+      'variables' => [
+        'item' => NULL,
+        'item_attributes' => NULL,
+        'entity' => NULL,
+        'settings' => NULL,
+      ],
+      'file' => 'glightbox.theme.inc',
+    ],
+  ];
+}

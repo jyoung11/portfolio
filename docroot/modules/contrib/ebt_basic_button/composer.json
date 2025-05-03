@@ -1,0 +1,17 @@
+{
+    "name": "drupal/ebt_basic_button",
+    "type": "drupal-module",
+    "description": "Extra Block Types (EBT): Basic Button",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0-or-later",
+    "homepage": "http://drupal.org/project/ebt_basic_button",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/ebt_basic_button",
+        "source": "https://git.drupalcode.org/project/ebt_basic_button"
+    },
+    "require": {
+        "drupal/ebt_core": "^1.4.8",
+        "drupal/paragraphs": "^1.0"
+    }
+}

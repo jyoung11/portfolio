@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ebt_video
+label: 'EBT Video'
+revision: 0
+description: 'Extra Block Type (EBT): Video'

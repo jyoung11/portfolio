@@ -1,0 +1,19 @@
+uuid: 1504ec17-d9ac-4ee4-a44f-52934b6a3e9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_intro_title
+    - node.type.portfolio_page
+id: node.portfolio_page.field_intro_title
+field_name: field_intro_title
+entity_type: node
+bundle: portfolio_page
+label: 'Intro Title'
+description: 'The text to appear as an H1 at the beginning of the Portfolio Page content'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

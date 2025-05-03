@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ebt_accordion
+label: 'EBT Accordion section / FAQ section'
+icon_uuid: null
+icon_default: null
+description: 'Accordion or FAQ section for EBT Accordion/FAQ'
+behavior_plugins: {  }

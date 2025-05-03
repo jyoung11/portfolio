@@ -1,0 +1,17 @@
+uuid: 8281d07c-b511-457a-b372-08d2961d50d6
+langcode: en
+status: true
+dependencies: {  }
+id: prod
+label: Prod
+description: 'Config settings for Acquia Cloud Production environment'
+folder: ../config/envs/prod
+module: {  }
+theme: {  }
+blacklist:
+  - shield.settings
+graylist:
+  - system.performance
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

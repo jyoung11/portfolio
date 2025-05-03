@@ -1,0 +1,8 @@
+uuid: defb4b11-f190-40bf-a911-92a8033138d4
+langcode: en
+status: true
+dependencies: {  }
+name: 'Meeting Type'
+vid: meeting_type
+description: 'Different types of meetings for Portfolio Pages'
+weight: 0

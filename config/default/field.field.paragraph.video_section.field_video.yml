@@ -1,0 +1,30 @@
+uuid: d2f35b75-e33e-477b-befb-a3be055bacb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_video
+    - media.type.brightcove_extras_video
+    - media.type.remote_video
+    - paragraphs.paragraphs_type.video_section
+id: paragraph.video_section.field_video
+field_name: field_video
+entity_type: paragraph
+bundle: video_section
+label: Video
+description: "Select (or create an entry for) a Brightcove Video or a Remote Video (e.g. Vimeo URL)<br><br>\r\n<strong>ENGINEERING NOTE:</strong> <em>Replace \"Remote video\" with \"Brightcove Video\" when implemented</em>"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      brightcove_extras_video: brightcove_extras_video
+      remote_video: remote_video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: brightcove_extras_video
+field_type: entity_reference

@@ -1,0 +1,4 @@
+ebt_video:
+  css:
+    component:
+      css/ebt-video.css: {}

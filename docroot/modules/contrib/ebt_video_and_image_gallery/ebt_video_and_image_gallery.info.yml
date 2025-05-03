@@ -1,0 +1,17 @@
+type: module
+name: 'Extra Block Types (EBT): Video and Image Gallery'
+description: 'Adds Video and Image Gallery block type with PhotoSwipe support.'
+core_version_requirement: ^9.3 || ^10 || ^11
+package: 'Extra Block Types'
+
+dependencies:
+  - ebt_core:ebt_core
+  - drupal:media
+  - glightbox:glightbox
+  - glightbox_media_video:glightbox_media_video
+  - paragraphs:paragraphs
+
+# Information added by Drupal.org packaging script on 2024-07-31
+version: '1.4.10'
+project: 'ebt_video_and_image_gallery'
+datestamp: 1722409723

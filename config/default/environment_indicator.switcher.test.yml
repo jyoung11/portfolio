@@ -1,0 +1,10 @@
+uuid: 05739e02-5bba-4d76-b79b-fc2677bae65f
+langcode: en
+status: true
+dependencies: {  }
+machine: test
+description: null
+name: Stage
+url: 'http://addhubwwerdkxcoo.devcloud.acquia-sites.com'
+fg_color: '#000000'
+bg_color: '#ffc000'

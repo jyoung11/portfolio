@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ebt_video_and_image_gallery
+label: 'EBT Video and Image Gallery'
+revision: 0
+description: 'Extra Block Type (EBT): Video and Image Gallery'

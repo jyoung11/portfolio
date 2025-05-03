@@ -1,0 +1,29 @@
+uuid: d0605391-8166-4e95-9bc7-3183154618e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meeting_type
+    - node.type.portfolio_page
+    - taxonomy.vocabulary.meeting_type
+id: node.portfolio_page.field_meeting_type
+field_name: field_meeting_type
+entity_type: node
+bundle: portfolio_page
+label: 'Meeting Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      meeting_type: meeting_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

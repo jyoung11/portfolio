@@ -1,0 +1,10 @@
+uuid: 97322c20-a6b9-4904-88ea-6785538943fb
+langcode: en
+status: true
+dependencies: {  }
+machine: dev
+description: null
+name: Dev
+url: 'http://addhubgbylnxoake.devcloud.acquia-sites.com'
+fg_color: '#ffffff'
+bg_color: '#00a000'

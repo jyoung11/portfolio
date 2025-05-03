@@ -1,0 +1,4 @@
+services:
+  ebt_basic_button.generate_custom_css:
+    class: Drupal\ebt_basic_button\Services\GenerateCustomCSS
+    arguments: ['@config.factory']

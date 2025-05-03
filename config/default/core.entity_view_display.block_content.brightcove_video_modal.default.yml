@@ -1,0 +1,22 @@
+uuid: 525c6abb-e0d0-455c-9646-977f47e07fdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.brightcove_video_modal
+    - field.field.block_content.brightcove_video_modal.brightcove_video
+id: block_content.brightcove_video_modal.default
+targetEntityType: block_content
+bundle: brightcove_video_modal
+mode: default
+content:
+  brightcove_video:
+    label: hidden
+    type: entity_reference_entity_view
+    weight: 0
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }

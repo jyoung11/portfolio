@@ -1,0 +1,14 @@
+uuid: d48d0ae6-411d-4a71-8aa8-52c996e48d29
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.meeting_type
+id: taxonomy_vocabulary_meeting_type
+entity_type_id: taxonomy_vocabulary
+entity_id: meeting_type
+action: access_denied
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

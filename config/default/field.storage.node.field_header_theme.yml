@@ -1,0 +1,27 @@
+uuid: 982e297f-7f5b-46bc-b6bf-9128959d1470
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_header_theme
+field_name: field_header_theme
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: orange
+      label: Orange
+    -
+      value: white
+      label: White
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

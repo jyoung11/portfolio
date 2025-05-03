@@ -1,0 +1,23 @@
+uuid: fa1270bc-da5f-4727-8f14-69c130c86b4e
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: 6eEXrShx60mYQrxXl7cNyYGAoapWfEiT_M3xSlRl2YQ
+id: media.field_brightcove_video_id
+field_name: field_brightcove_video_id
+entity_type: media
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

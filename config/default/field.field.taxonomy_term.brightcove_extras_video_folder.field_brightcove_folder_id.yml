@@ -1,0 +1,21 @@
+uuid: 11c0e0d5-0d53-4771-bab1-42d1dc484343
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_brightcove_folder_id
+    - taxonomy.vocabulary.brightcove_extras_video_folder
+_core:
+  default_config_hash: wYKsQIa1_SMPISeYWLOC-iHJT2WFYMgoSLW_PUQ6kFo
+id: taxonomy_term.brightcove_extras_video_folder.field_brightcove_folder_id
+field_name: field_brightcove_folder_id
+entity_type: taxonomy_term
+bundle: brightcove_extras_video_folder
+label: 'Brightcove Folder ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

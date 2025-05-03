@@ -1,0 +1,16 @@
+name: 'doorg'
+type: theme
+description: 'A custom subtheme for the Door G Virtual Production site based on Bootstrap5'
+core_version_requirement: ^10 || ^11
+version: 1.x-1.0.0
+base theme: bootstrap5
+libraries:
+  - doorg/global-css
+  - doorg/global-js
+
+regions:
+  header: 'Header'
+  hero: 'Hero'
+  content: 'Content'
+  footer: 'Footer'
+  copyright: 'Copyright'

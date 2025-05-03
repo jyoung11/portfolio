@@ -1,0 +1,14 @@
+type: module
+name: 'Extra Block Types (EBT): Stats'
+description: 'Adds Stats block type with Numbers and Text.'
+core_version_requirement: ^9.3 || ^10 || ^11
+package: 'Extra Block Types'
+
+dependencies:
+  - ebt_core:ebt_core
+  - paragraphs:paragraphs
+
+# Information added by Drupal.org packaging script on 2024-04-30
+version: '1.4.3'
+project: 'ebt_stats'
+datestamp: 1714488382

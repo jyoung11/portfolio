@@ -1,0 +1,17 @@
+{
+    "name": "drupal/ebt_stats",
+    "type": "drupal-module",
+    "description": "Extra Block Types (EBT): Stats",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0-or-later",
+    "homepage": "http://drupal.org/project/ebt_stats",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/ebt_stats",
+        "source": "https://git.drupalcode.org/project/ebt_stats"
+    },
+    "require": {
+        "drupal/ebt_core": "^1.4",
+        "drupal/paragraphs": "^1.0"
+    }
+}

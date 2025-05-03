@@ -1,0 +1,15 @@
+uuid: 5bfed04d-3c0e-4cd3-b5f8-08000682c8cc
+name: '(add) Hub'
+mail: engineering@addventures.com
+slogan: ''
+page:
+  403: ''
+  404: /node/11
+  front: /node/6
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
+mail_notification: ''

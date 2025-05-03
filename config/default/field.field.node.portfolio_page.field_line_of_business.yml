@@ -1,0 +1,29 @@
+uuid: 59334eb9-9521-4fe4-92d3-6a49ee04b857
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_line_of_business
+    - node.type.portfolio_page
+    - taxonomy.vocabulary.line_of_business
+id: node.portfolio_page.field_line_of_business
+field_name: field_line_of_business
+entity_type: node
+bundle: portfolio_page
+label: 'Line of Business'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      line_of_business: line_of_business
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

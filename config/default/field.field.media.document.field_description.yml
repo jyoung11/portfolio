@@ -1,0 +1,19 @@
+uuid: fe643a8a-74cf-4f03-b103-be354fd23e89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_description
+    - media.type.document
+id: media.document.field_description
+field_name: field_description
+entity_type: media
+bundle: document
+label: Description
+description: 'Description of the Document'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: ebt_gallery_image
+label: 'EBT Gallery Image'
+effects:
+  6ab4544c-7611-414c-aaa8-4eed96b10c84:
+    uuid: 6ab4544c-7611-414c-aaa8-4eed96b10c84
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 365
+      height: 265
+      anchor: center-center

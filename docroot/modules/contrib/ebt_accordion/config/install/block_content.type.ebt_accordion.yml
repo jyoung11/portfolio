@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ebt_accordion
+label: 'EBT Accordion/FAQ'
+revision: 1
+description: 'Extra Block Type (EBT): Accordion/FAQ'

@@ -1,0 +1,93 @@
+uuid: 071d3c0b-6971-43a8-8aba-ffbd85a278d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.portfolio_page.field_client
+    - field.field.node.portfolio_page.field_client_types
+    - field.field.node.portfolio_page.field_footer
+    - field.field.node.portfolio_page.field_header_theme
+    - field.field.node.portfolio_page.field_intro_text
+    - field.field.node.portfolio_page.field_intro_title
+    - field.field.node.portfolio_page.field_line_of_business
+    - field.field.node.portfolio_page.field_meeting_type
+    - field.field.node.portfolio_page.field_partner_logo
+    - field.field.node.portfolio_page.field_portfolio_contents
+    - node.type.portfolio_page
+  module:
+    - entity_reference_revisions
+    - options
+    - text
+    - user
+id: node.portfolio_page.default
+targetEntityType: node
+bundle: portfolio_page
+mode: default
+content:
+  field_client:
+    weight: 8
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_footer:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_header_theme:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_intro_text:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_intro_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_line_of_business:
+    weight: 7
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_partner_logo:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_portfolio_contents:
+    type: entity_reference_revisions_entity_view
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_client_types: true
+  field_meeting_type: true
+  links: true

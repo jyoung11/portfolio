@@ -1,0 +1,53 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ebt_stats_item.field_stats_item_image
+    - field.field.paragraph.ebt_stats_item.field_stats_item_link
+    - field.field.paragraph.ebt_stats_item.field_stats_item_number
+    - field.field.paragraph.ebt_stats_item.field_stats_item_text
+    - paragraphs.paragraphs_type.ebt_stats_item
+  module:
+    - link
+    - text
+id: paragraph.ebt_stats_item.default
+targetEntityType: paragraph
+bundle: ebt_stats_item
+mode: default
+content:
+  field_stats_item_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_stats_item_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 1024
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_stats_item_number:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_stats_item_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

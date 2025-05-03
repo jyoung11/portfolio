@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * @file
+ * EBT Hero module file.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ebt_hero_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ebt_hero module.
+    case 'help.page.ebt_hero':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Extra Block Types: Hero module provides ability to add Text with button.') . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function ebt_hero_preprocess_block(&$variables) {
+  if (empty($variables['elements']['content']['#block_content']) ||
+    $variables['elements']['content']['#block_content']->bundle() !== 'ebt_hero') {
+    return;
+  }
+
+  if (!empty($variables['base_plugin_id']) && $variables['base_plugin_id'] == 'inline_block') {
+    $block_class = 'block-revision-id-' . $variables['configuration']['block_revision_id'];
+  }
+  else {
+    $block_class = str_replace(':', '', $variables['plugin_id']);
+    $block_class = str_replace('_', '-', $block_class);
+    $block_class = 'ebt-block-' . $block_class;
+  }
+
+  $ebt_settings = $variables['content']['#block_content']->field_ebt_settings->getValue();
+
+  $service = \Drupal::service('ebt_basic_button.generate_custom_css');
+  $variables['button_styles'] = $service->generateFromSettings($ebt_settings[0]['ebt_settings'], $block_class);
+
+  $service = \Drupal::service('ebt_hero.generate_hero_css');
+  $variables['hero_styles'] = $service->generateFromSettings($ebt_settings[0]['ebt_settings'], $block_class);
+}

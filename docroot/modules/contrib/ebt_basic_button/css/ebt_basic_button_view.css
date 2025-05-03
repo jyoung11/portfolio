@@ -1,0 +1,99 @@
+.ebt-basic-button {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+.ebt-basic-button .ebt-basic-button-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+}
+.ebt-basic-button.ebt-align-left .ebt-container {
+  text-align: left;
+}
+.ebt-basic-button.ebt-align-center .ebt-container {
+  text-align: center;
+}
+.ebt-basic-button.ebt-align-right .ebt-container {
+  text-align: right;
+}
+.ebt-basic-button.ebt-shape-square .ebt-container .ebt-basic-button {
+  border-radius: 0;
+}
+.ebt-basic-button.ebt-shape-round .ebt-container .ebt-basic-button {
+  border-radius: 5px;
+}
+.ebt-basic-button.ebt-shape-circle .ebt-container .ebt-basic-button {
+  border-radius: 4em;
+}
+.ebt-basic-button.ebt-size-small .ebt-container .ebt-basic-button {
+  font-size: 13px;
+  padding: 10px 30px;
+}
+.ebt-basic-button.ebt-size-medium .ebt-container .ebt-basic-button {
+  font-size: 16px;
+  padding: 15px 43px;
+}
+.ebt-basic-button.ebt-size-large .ebt-container .ebt-basic-button {
+  font-size: 21px;
+  padding: 20px 56px;
+}
+.ebt-basic-button.ebt-stretched .ebt-container .ebt-basic-button-wrapper {
+  width: 100%;
+}
+.ebt-basic-button.ebt-stretched .ebt-container .ebt-basic-button {
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.ebt-button2-wrapper .ebt-basic-button2-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+}
+.ebt-button2-wrapper .ebt-basic-button2-wrapper .ebt-basic-button2 {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+.ebt-button2-wrapper.ebt-align-left {
+  text-align: left;
+}
+.ebt-button2-wrapper.ebt-align-center {
+  text-align: center;
+}
+.ebt-button2-wrapper.ebt-align-right {
+  text-align: right;
+}
+.ebt-button2-wrapper.ebt-shape-square .ebt-basic-button2 {
+  border-radius: 0;
+}
+.ebt-button2-wrapper.ebt-shape-round .ebt-basic-button2 {
+  border-radius: 5px;
+}
+.ebt-button2-wrapper.ebt-shape-circle .ebt-basic-button2 {
+  border-radius: 4em;
+}
+.ebt-button2-wrapper.ebt-size-small .ebt-basic-button2 {
+  font-size: 13px;
+  padding: 10px 30px;
+}
+.ebt-button2-wrapper.ebt-size-medium .ebt-basic-button2 {
+  font-size: 16px;
+  padding: 15px 43px;
+}
+.ebt-button2-wrapper.ebt-size-large .ebt-basic-button2 {
+  font-size: 21px;
+  padding: 20px 56px;
+}
+.ebt-button2-wrapper.ebt-stretched .ebt-basic-button2-wrapper {
+  width: 100%;
+}
+.ebt-button2-wrapper.ebt-stretched .ebt-basic-button2 {
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+}

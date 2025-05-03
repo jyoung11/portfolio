@@ -1,0 +1,40 @@
+uuid: 6fc4c336-73d0-4313-b839-ce347456ed6b
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.portfolio_page.field_client
+    - field.field.node.portfolio_page.field_client_types
+    - field.field.node.portfolio_page.field_footer
+    - field.field.node.portfolio_page.field_header_theme
+    - field.field.node.portfolio_page.field_intro_text
+    - field.field.node.portfolio_page.field_intro_title
+    - field.field.node.portfolio_page.field_line_of_business
+    - field.field.node.portfolio_page.field_meeting_type
+    - field.field.node.portfolio_page.field_partner_logo
+    - field.field.node.portfolio_page.field_portfolio_contents
+    - node.type.portfolio_page
+  module:
+    - user
+id: node.portfolio_page.teaser
+targetEntityType: node
+bundle: portfolio_page
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_client: true
+  field_client_types: true
+  field_footer: true
+  field_header_theme: true
+  field_intro_text: true
+  field_intro_title: true
+  field_line_of_business: true
+  field_meeting_type: true
+  field_partner_logo: true
+  field_portfolio_contents: true

@@ -1,0 +1,89 @@
+<?php
+
+/**
+ * @file
+ * EBT Call to Action (CTA) module file.
+ */
+
+use Drupal\media\Entity\Media;
+use Drupal\file\Entity\File;
+use Drupal\image\Entity\ImageStyle;
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function ebt_image_preprocess_block(&$variables) {
+  _ebt_image_apply_image_style($variables);
+  _ebt_image_apply_lightbox_image_style($variables);
+}
+
+/**
+ * Replace image style for image formatter on fly.
+ */
+function _ebt_image_apply_image_style(&$variables) {
+  if (empty($variables['elements']['content']['#block_content']) ||
+    $variables['elements']['content']['#block_content']->bundle() !== 'ebt_image') {
+    return;
+  }
+
+  if (empty($variables['content']['field_ebt_image'][0]['#theme'])) {
+    return;
+  }
+
+  if ($variables['content']['field_ebt_image'][0]['#theme'] != 'image_formatter') {
+    return;
+  }
+
+  if (empty($variables['content']['field_ebt_settings'][0]['#ebt_settings']['image_style'])) {
+    return;
+  }
+
+  if ($variables['content']['field_ebt_settings'][0]['#ebt_settings']['image_style'] == 'none') {
+    return;
+  }
+
+  $variables['content']['field_ebt_image'][0]['#image_style'] = $variables['content']['field_ebt_settings'][0]['#ebt_settings']['image_style'];
+}
+
+/**
+ * Add GLightbox image URL with image style.
+ */
+function _ebt_image_apply_lightbox_image_style(&$variables) {
+  if (empty($variables['elements']['content']['#block_content']) ||
+    $variables['elements']['content']['#block_content']->bundle() !== 'ebt_image') {
+    return;
+  }
+
+  if (empty($variables['content']['field_ebt_settings'][0]['#ebt_settings']['image_lightbox'])) {
+    return;
+  }
+
+  $block = $variables['content']['field_ebt_image']['#object'];
+
+  if (empty($block->field_ebt_image->target_id)) {
+    return;
+  };
+
+  $media = Media::load($block->field_ebt_image->target_id);
+  if (empty($media)) {
+    return;
+  }
+
+  $fid = $media->field_media_image->target_id;
+  $file = File::load($fid);
+  if (empty($file)) {
+    return;
+  }
+
+  $variables['show_lightbox'] = TRUE;
+  if (empty($variables['content']['field_ebt_settings'][0]['#ebt_settings']['lightbox_image_style']) ||
+    $variables['content']['field_ebt_settings'][0]['#ebt_settings']['lightbox_image_style'] == 'none') {
+    $uri = $file->getFileUri();
+    $variables['lightbox_url'] = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
+  }
+  else {
+    $image_uri = $file->getFileUri();
+    $style = ImageStyle::load($variables['content']['field_ebt_settings'][0]['#ebt_settings']['lightbox_image_style']);
+    $variables['lightbox_url'] = $style->buildUrl($image_uri);
+  }
+}

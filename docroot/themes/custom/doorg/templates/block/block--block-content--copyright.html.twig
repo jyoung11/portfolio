@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Custom template for the Copyright block.
+ *
+ * Available variables:
+ * - content: The content of the block.
+ * - label: The block label.
+ * - configuration: A list of the block's configuration values.
+ * - plugin_id: The ID of the block plugin.
+ * - base_plugin_id: The base ID of the block plugin.
+ * - derivative_plugin_id: The derivative ID of the block plugin.
+ * - attributes: HTML attributes for the block.
+ * - current_year: The current year passed from the preprocess function.
+ */
+#}
+<div{{ attributes.addClass('block', 'block--copyright') }}>
+  {% if label %}
+    <h2>{{ label }}</h2>
+  {% endif %}
+  <div class="block__content">
+    <p>&copy; {{ current_year }} {{ site_name }}</p>
+  </div>
+</div>

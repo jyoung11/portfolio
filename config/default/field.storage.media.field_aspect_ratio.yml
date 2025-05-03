@@ -1,0 +1,30 @@
+uuid: 8b86828e-3364-4ffb-ba11-4798086682c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - options
+id: media.field_aspect_ratio
+field_name: field_aspect_ratio
+entity_type: media
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: aspect-ratio-4-3
+      label: '4:3 (SD video)'
+    -
+      value: aspect-ratio-16-9
+      label: '16:9 (HD video)'
+    -
+      value: aspect-ratio-16-10
+      label: '16:10 (display)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

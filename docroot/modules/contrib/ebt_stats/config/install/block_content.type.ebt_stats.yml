@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ebt_stats
+label: 'EBT Stats'
+revision: 0
+description: 'Extra Block Type (EBT): Stats'

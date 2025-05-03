@@ -1,0 +1,19 @@
+uuid: fbf9f92a-2532-4cee-8d04-7e1346549b86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_title
+    - media.type.document
+id: media.document.field_title
+field_name: field_title
+entity_type: media
+bundle: document
+label: Title
+description: 'The title of the Document'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

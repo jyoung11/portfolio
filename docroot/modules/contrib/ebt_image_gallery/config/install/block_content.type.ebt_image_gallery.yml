@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ebt_image_gallery
+label: 'EBT Image Gallery'
+revision: 0
+description: 'Extra Block Type (EBT): Image Gallery'

@@ -1,0 +1,10 @@
+uuid: 53e9f61e-2e36-4baf-a2ee-18198245514b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: n02byghKoSnOqMdk1VLYJr7jYnA3VMCIXq5rrDAZrRE
+name: 'Brightcove Video Folder'
+vid: brightcove_extras_video_folder
+description: ''
+weight: 0

@@ -1,0 +1,21 @@
+uuid: 192cde64-1b5f-4741-81b7-e078539bfc9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_brightcove_video_id
+    - media.type.brightcove_extras_video
+_core:
+  default_config_hash: dkm94shyJ7RrYhLb2bnvKrouvhiN5KNC08UyKhF2bqM
+id: media.brightcove_extras_video.field_brightcove_video_id
+field_name: field_brightcove_video_id
+entity_type: media
+bundle: brightcove_extras_video
+label: 'Brightcove Video ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

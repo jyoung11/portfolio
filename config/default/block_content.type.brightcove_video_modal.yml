@@ -1,0 +1,8 @@
+uuid: 1996e209-af10-4139-8c61-db4fa5834e08
+langcode: en
+status: true
+dependencies: {  }
+id: brightcove_video_modal
+label: 'Brightcove Video Modal'
+revision: null
+description: 'A place to embed the brightcove video modal.'

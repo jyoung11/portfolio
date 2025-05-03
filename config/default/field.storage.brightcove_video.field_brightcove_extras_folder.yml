@@ -1,0 +1,22 @@
+uuid: ffcc053a-24fc-4d13-9172-2b9721432f91
+langcode: en
+status: true
+dependencies:
+  module:
+    - brightcove
+    - taxonomy
+_core:
+  default_config_hash: CylS4Hv9isnGdyO_gZTLtb_BM6eZEuNXAQEJ5GEEH0A
+id: brightcove_video.field_brightcove_extras_folder
+field_name: field_brightcove_extras_folder
+entity_type: brightcove_video
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

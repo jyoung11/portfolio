@@ -1,0 +1,32 @@
+uuid: 2ad99aa5-1f47-423b-8d67-34d6c6a5db51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.brightcove_video.field_brightcove_extras_folder
+    - taxonomy.vocabulary.brightcove_extras_video_folder
+  module:
+    - brightcove
+_core:
+  default_config_hash: BU-OMkgwBSS8dFag1ppRgEnc-XcFFIOyBZyh-rQAW-c
+id: brightcove_video.brightcove_video.field_brightcove_extras_folder
+field_name: field_brightcove_extras_folder
+entity_type: brightcove_video
+bundle: brightcove_video
+label: 'Folder Reference'
+description: 'The Brightcove folder this video lives in.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      brightcove_extras_video_folder: brightcove_extras_video_folder
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

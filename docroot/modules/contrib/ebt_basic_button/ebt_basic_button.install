@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall logic for EBT Basic Button.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function ebt_basic_button_uninstall() {
+
+  // Get the object of block type.
+  $block_type = \Drupal::entityTypeManager()->getStorage('block_content_type')->load('ebt_basic_button');
+
+  // If there is no the block type "ebt_basic_button", skip.
+  if (empty($block_type)) {
+    return;
+  }
+
+  // Get all possible block content for this block type.
+  $block_content = \Drupal::entityTypeManager()->getStorage('block_content')->loadByProperties(['type' => 'ebt_basic_button']);
+
+  // If there are custom block content with block type, skip.
+  if (!empty($block_content)) {
+    \Drupal::logger('ebt_basic_button')->notice(t('You uninstalled "ebt_basic_button" but there are custom blocks with type "ebt_basic_button", for this reason the block type was not deleted'));
+    return;
+  }
+
+  // Delete the block type.
+  $block_type->delete();
+}

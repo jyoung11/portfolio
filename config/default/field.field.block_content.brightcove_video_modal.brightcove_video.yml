@@ -1,0 +1,28 @@
+uuid: 910dc230-fdd9-4e2c-9930-f41b25dd5fc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.brightcove_video_modal
+    - field.storage.block_content.brightcove_video
+    - media.type.brightcove_extras_video
+id: block_content.brightcove_video_modal.brightcove_video
+field_name: brightcove_video
+entity_type: block_content
+bundle: brightcove_video_modal
+label: 'Brightcove Video'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      brightcove_extras_video: brightcove_extras_video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

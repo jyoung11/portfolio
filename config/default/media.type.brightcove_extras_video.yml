@@ -1,0 +1,18 @@
+uuid: f7fb4c66-d4de-461c-baaa-9d1c987bb7bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_brightcove
+_core:
+  default_config_hash: uZgHjPQF_KB0Hv1xBQqzGzCvnsVy5aPIAFzkeBa2AjU
+id: brightcove_extras_video
+label: 'Brightcove Video'
+description: 'Media entities which act as a proxy to Brightcove Video entities.'
+source: brightcove_video
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_brightcove_video
+field_map:
+  name: name

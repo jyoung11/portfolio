@@ -1,0 +1,12 @@
+uuid: befd128a-f239-4c22-a38f-0a6db35091cf
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 61GpB-LGgzJaOA8OV1uhEdopIHtt8WOmMXn-nne1wqo
+id: brigthcove_extras_transcript
+label: 'Brigthcove Extras Transcript'
+icon_uuid: null
+icon_default: null
+description: 'Transcript fields for Brightcove Videos'
+behavior_plugins: {  }

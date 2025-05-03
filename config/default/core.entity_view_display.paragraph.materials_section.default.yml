@@ -1,0 +1,39 @@
+uuid: 10cb8abf-1566-40eb-844b-9dcd796cf227
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.materials_section.field_description
+    - field.field.paragraph.materials_section.field_document
+    - field.field.paragraph.materials_section.field_title
+    - paragraphs.paragraphs_type.materials_section
+id: paragraph.materials_section.default
+targetEntityType: paragraph
+bundle: materials_section
+mode: default
+content:
+  field_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_document:
+    type: entity_reference_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

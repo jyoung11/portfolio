@@ -1,0 +1,8 @@
+uuid: 45c31b17-8088-493d-9061-ec1f091c124b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Client Type'
+vid: client_type
+description: 'Different types of clients for Portfolio Pages'
+weight: 0

@@ -1,0 +1,14 @@
+uuid: 50488566-18f9-4cc7-a105-55a798b309e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.line_of_business
+id: taxonomy_vocabulary_line_of_business
+entity_type_id: taxonomy_vocabulary
+entity_id: line_of_business
+action: access_denied
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

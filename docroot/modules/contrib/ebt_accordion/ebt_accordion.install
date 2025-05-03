@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the EBT Accordion.
+ */
+
+use Drupal\field\Entity\FieldConfig;
+
+/**
+ * Set the label of "ebt_accordion" to 'EBT Accordion section / FAQ section'.
+ */
+function ebt_accordion_update_9101() {
+
+  // Get the paragraph type entity.
+  $paragraph_type = \Drupal::entityTypeManager()->getStorage('paragraphs_type')->load('ebt_accordion');
+
+  // If empty for any reason, just skip this.
+  if (empty($paragraph_type)) {
+    return;
+  }
+
+  // Set the new label.
+  $paragraph_type->label = 'EBT Accordion section / FAQ section';
+
+  // Save the object.
+  $paragraph_type->save();
+
+}
+
+/**
+ * Set the fields "Title / Question" and "Text / Answer" as required.
+ */
+function ebt_accordion_update_9102() {
+
+  // Set the machine names.
+  $paragraph_type_id = 'ebt_accordion';
+
+  // Load the "field title" configuration object.
+  $field_title_config = FieldConfig::loadByName('paragraph', $paragraph_type_id, 'field_ebt_accordion_title');
+
+  // If find the field, set it as required.
+  if (!empty($field_title_config)) {
+    $field_title_config->setRequired(TRUE)->save();
+  }
+
+  // Load the "field text" configuration object.
+  $field_text_config = FieldConfig::loadByName('paragraph', $paragraph_type_id, 'field_ebt_accordion_text');
+
+  // If find the field, set it as required.
+  if (!empty($field_text_config)) {
+    $field_text_config->setRequired(TRUE)->save();
+  }
+
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function ebt_accordion_uninstall() {
+
+  \Drupal::logger('ebt_accordion')->notice(t('The EBT Accordion has been uninstalled, but the Block Type have not been deleted for consistency reasons. If needed, you can manually remove them by going to Structure » Block layout » Custom block library'));
+
+}

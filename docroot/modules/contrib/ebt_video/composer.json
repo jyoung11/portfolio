@@ -1,0 +1,19 @@
+{
+    "name": "drupal/ebt_video",
+    "type": "drupal-module",
+    "description": "Extra Block Types (EBT): Video",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0-or-later",
+    "homepage": "http://drupal.org/project/ebt_video",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/ebt_video",
+        "source": "https://git.drupalcode.org/project/ebt_video"
+    },
+    "require": {
+        "drupal/ebt_core": "^1.4",
+        "drupal/glightbox": "^1.0",
+        "drupal/glightbox_media_video": "^1.0",
+        "drupal/paragraphs": "^1.0"
+    }
+}

@@ -1,0 +1,10 @@
+uuid: 80298c88-7997-4a20-94c7-3fed29ca5488
+langcode: en
+status: true
+dependencies: {  }
+id: materials_collection
+label: 'Materials Collection'
+icon_uuid: null
+icon_default: null
+description: 'A set of one or more <em>Materials Section</em> paragraph types'
+behavior_plugins: {  }

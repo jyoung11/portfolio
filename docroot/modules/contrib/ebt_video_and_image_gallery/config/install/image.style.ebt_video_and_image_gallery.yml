@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: ebt_video_and_image_gallery
+label: 'EBT Video and Image gallery'
+effects:
+  de12b6ed-b5ac-4ec8-9cf1-0df6cb6c8d32:
+    uuid: de12b6ed-b5ac-4ec8-9cf1-0df6cb6c8d32
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 360
+      anchor: center-center

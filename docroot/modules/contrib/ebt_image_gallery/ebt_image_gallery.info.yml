@@ -1,0 +1,15 @@
+type: module
+name: 'Extra Block Types (EBT): Image Gallery'
+description: 'Adds Image Gallery block with GLightbox.'
+core_version_requirement: ^9.3 || ^10 || ^11
+package: 'Extra Block Types'
+
+dependencies:
+  - ebt_core:ebt_core
+  - glightbox:glightbox
+  - drupal:media
+
+# Information added by Drupal.org packaging script on 2024-07-31
+version: '1.4.6'
+project: 'ebt_image_gallery'
+datestamp: 1722409056

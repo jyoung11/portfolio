@@ -1,0 +1,99 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_video
+    - field.field.block_content.ebt_video.body
+    - field.field.block_content.ebt_video.field_ebt_settings
+    - field.field.block_content.ebt_video.field_ebt_video
+  module:
+    - ebt_video
+    - field_group
+    - media_library
+    - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_content
+        - group_settings
+      label: Tabs
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_content:
+      children:
+        - info
+        - body
+        - field_ebt_video
+      label: Content
+      region: content
+      parent_name: group_tabs
+      weight: 5
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: true
+    group_settings:
+      children:
+        - field_ebt_settings
+      label: Settings
+      region: content
+      parent_name: group_tabs
+      weight: 6
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: block_content.ebt_video.default
+targetEntityType: block_content
+bundle: ebt_video
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_ebt_settings:
+    type: ebt_settings_video
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ebt_video:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

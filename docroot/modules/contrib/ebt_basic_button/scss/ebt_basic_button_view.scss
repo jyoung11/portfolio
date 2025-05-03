@@ -1,0 +1,125 @@
+.ebt-basic-button {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  .ebt-basic-button-wrapper {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+  }
+
+  &.ebt-align-left .ebt-container {
+    text-align: left;
+  }
+
+  &.ebt-align-center .ebt-container {
+    text-align: center;
+  }
+
+  &.ebt-align-right .ebt-container {
+    text-align: right;
+  }
+
+  &.ebt-shape-square .ebt-container .ebt-basic-button {
+    border-radius: 0;
+  }
+
+  &.ebt-shape-round .ebt-container .ebt-basic-button {
+    border-radius: 5px;
+  }
+
+  &.ebt-shape-circle .ebt-container .ebt-basic-button {
+    border-radius: 4em;
+  }
+
+  &.ebt-size-small .ebt-container .ebt-basic-button {
+    font-size: 13px;
+    padding: 10px 30px;
+  }
+
+  &.ebt-size-medium .ebt-container .ebt-basic-button {
+    font-size: 16px;
+    padding: 15px 43px;
+  }
+
+  &.ebt-size-large .ebt-container .ebt-basic-button {
+    font-size: 21px;
+    padding: 20px 56px;
+  }
+
+  &.ebt-stretched .ebt-container .ebt-basic-button-wrapper {
+    width: 100%;
+  }
+
+  &.ebt-stretched .ebt-container .ebt-basic-button {
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
+
+.ebt-button2-wrapper {
+  .ebt-basic-button2-wrapper {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+    .ebt-basic-button2 {
+      display: inline-block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  &.ebt-align-left {
+    text-align: left;
+  }
+
+  &.ebt-align-center {
+    text-align: center;
+  }
+
+  &.ebt-align-right {
+    text-align: right;
+  }
+
+  &.ebt-shape-square .ebt-basic-button2 {
+    border-radius: 0;
+  }
+
+  &.ebt-shape-round .ebt-basic-button2 {
+    border-radius: 5px;
+  }
+
+  &.ebt-shape-circle .ebt-basic-button2 {
+    border-radius: 4em;
+  }
+
+  &.ebt-size-small .ebt-basic-button2 {
+    font-size: 13px;
+    padding: 10px 30px;
+  }
+
+  &.ebt-size-medium .ebt-basic-button2 {
+    font-size: 16px;
+    padding: 15px 43px;
+  }
+
+  &.ebt-size-large .ebt-basic-button2 {
+    font-size: 21px;
+    padding: 20px 56px;
+  }
+
+  &.ebt-stretched {
+    .ebt-basic-button2-wrapper {
+      width: 100%;
+    }
+
+    .ebt-basic-button2 {
+      width: 100%;
+      display: inline-block;
+      box-sizing: border-box;
+      text-align: center;
+    }
+  }
+}

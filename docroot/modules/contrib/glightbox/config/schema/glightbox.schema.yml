@@ -1,0 +1,98 @@
+field.formatter.settings.glightbox:
+  type: mapping
+  label: 'Entity reference field formatter settings.'
+  mapping:
+    glightbox_node_style:
+      type: string
+      label: 'Node Style'
+    glightbox_node_style_first:
+      type: string
+      label: 'Node style first'
+    glightbox_image_style:
+      type: string
+      label: 'Image style'
+    glightbox_gallery:
+      type: string
+      label: 'Gallery'
+    glightbox_gallery_custom:
+      type: string
+      label: 'Gallery custom'
+    glightbox_caption:
+      type: string
+      label: 'Caption'
+    glightbox_caption_custom:
+      type: string
+      label: 'Caption custom'
+
+glightbox.settings:
+  type: config_object
+  label: 'GLightbox settings'
+  mapping:
+    custom:
+      type: mapping
+      label: Custom Settings
+      mapping:
+        activate:
+          type: integer
+          label: 'Options'
+        open_effect:
+          type: string
+          label: 'Open effect'
+        close_effect:
+          type: string
+          label: 'Close effect'
+        slide_effect:
+          type: string
+          label: 'Slide effect'
+        width:
+          type: text
+          label: 'Width'
+        height:
+          type: text
+          label: 'Height'
+        videos_width:
+          type: text
+          label: 'Videos width'
+        close_on_outside_click:
+          type: boolean
+          label: 'Overlay close'
+        more_text:
+          type: text
+          label: 'See More text'
+        more_length:
+          type: integer
+          label: 'More text threshold'
+        desc_position:
+          type: text
+          label: 'Description position'
+        loop:
+          type: boolean
+          label: 'Loop'
+        zoomable:
+          type: boolean
+          label: 'Zoomable'
+        draggable:
+          type: boolean
+          label: 'Draggable'
+        preload:
+          type: boolean
+          label: 'Preload'
+        autoplay_videos:
+          type: boolean
+          label: 'Autoplay videos'
+        autofocus_videos:
+          type: boolean
+          label: 'Autofocus videos'
+        videosWidth:
+          type: string
+          label: 'Video width'
+    advanced:
+      type: mapping
+      label: 'Advanced settings'
+      mapping:
+        unique_token:
+          type: integer
+          label: 'Unique per-request gallery token'
+        compression_type:
+          type: string
+          label: 'GLightbox compression level'

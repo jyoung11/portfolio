@@ -1,0 +1,17 @@
+{
+    "name": "drupal/ebt_image_gallery",
+    "type": "drupal-module",
+    "description": "Extra Block Types (EBT): Image Gallery",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0-or-later",
+    "homepage": "http://drupal.org/project/ebt_image_gallery",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/ebt_image_gallery",
+        "source": "https://git.drupalcode.org/project/ebt_image_gallery"
+    },
+    "require": {
+        "drupal/ebt_core": "^1.4",
+        "drupal/glightbox": "^1.0"
+    }
+}

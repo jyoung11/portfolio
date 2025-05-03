@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * Custom template for the Copyright block.
+ *
+ * Available variables:
+ * - content: The content of the block.
+ * - label: The block label.
+ * - configuration: A list of the block's configuration values.
+ * - plugin_id: The ID of the block plugin.
+ * - base_plugin_id: The base ID of the block plugin.
+ * - derivative_plugin_id: The derivative ID of the block plugin.
+ * - attributes: HTML attributes for the block.
+ * - current_year: The current year passed from the preprocess function.
+ */
+#}
+{% set padding_class = '' %}
+{% if field_padding is defined and field_padding is not empty %}
+  {% set padding_class = 'padding-' ~ field_padding %}
+{% endif %}
+{% set padding_top_class = '' %}
+{% if field_padding_top is defined and field_padding_top is not empty %}
+  {% set padding_top_class = 'padding-top-' ~ field_padding_top %}
+{% endif %}
+
+{%
+  set classes = [
+    'block',
+    'block--content-divider',
+    padding_class,
+    padding_top_class,
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+{{ title_suffix.contextual_links }}
+    <hr>
+</div>

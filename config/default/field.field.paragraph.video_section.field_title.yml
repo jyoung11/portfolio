@@ -1,0 +1,19 @@
+uuid: 9117e3df-1320-46a0-9f94-32f940c7083d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.video_section
+id: paragraph.video_section.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: video_section
+label: 'Title (override)'
+description: 'Optional title to replace the referenced Video''s Title field'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

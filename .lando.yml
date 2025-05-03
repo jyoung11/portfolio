@@ -1,0 +1,7 @@
+name: addhub
+recipe: acquia
+config:
+  acli_version: latest
+  ah_application_uuid: bd1857f3-8ae2-46e8-bfeb-3b877dcd5170
+  ah_site_group: addhub
+  php: '8.2'

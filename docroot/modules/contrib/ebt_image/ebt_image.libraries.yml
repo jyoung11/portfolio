@@ -1,0 +1,7 @@
+ebt_image_lightbox:
+  css:
+    component:
+      css/ebt_image_lightbox.css: {}
+  dependencies:
+    - glightbox/glightbox
+    - glightbox/init

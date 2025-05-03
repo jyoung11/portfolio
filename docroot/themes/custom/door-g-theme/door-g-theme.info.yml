@@ -1,0 +1,24 @@
+name: door-g-theme
+type: theme
+'base theme': stable9
+libraries:
+  - door-g-theme/base
+  - door-g-theme/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - door-g-theme/user
+  core/drupal.dropbutton:
+    - door-g-theme/dropbutton
+  core/drupal.dialog:
+    - door-g-theme/dialog
+  file/drupal.file:
+    - door-g-theme/file
+  core/drupal.progress:
+    - door-g-theme/progress
+version: 1.0.0
+project: drupal
+datestamp: 1725528273
+description: ''
+core_version_requirement: ^10
+generator: 'starterkit_theme:10.3.3'

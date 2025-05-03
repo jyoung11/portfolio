@@ -1,0 +1,21 @@
+uuid: ace46840-8294-4472-890f-3e71f6bd389a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_bex_threeplay_media_id
+    - media.type.brightcove_extras_video
+_core:
+  default_config_hash: brBDn89MQQ8aJhIlb30Hwe3CuR3C9pptZbXwQhdZW_s
+id: media.brightcove_extras_video.field_bex_threeplay_media_id
+field_name: field_bex_threeplay_media_id
+entity_type: media
+bundle: brightcove_extras_video
+label: '3Play media id'
+description: 'The ID from 3 Play of the brightcove video.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
