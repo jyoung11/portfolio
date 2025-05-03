@@ -1,7 +1,31 @@
-name: addhub
-recipe: acquia
+name: portfolio-jim
+recipe: drupal10
 config:
-  acli_version: latest
-  ah_application_uuid: bd1857f3-8ae2-46e8-bfeb-3b877dcd5170
-  ah_site_group: addhub
   php: '8.2'
+  webroot: docroot
+  database: mysql:5.7
+
+services:
+  appserver:
+    xdebug: true
+    build_as_root:
+      - apt-get update -y && apt-get install -y git unzip
+    environment:
+      PHP_OPCACHE_VALIDATE_TIMESTAMPS: 1
+
+  database:
+    portforward: true
+
+tooling:
+  drush:
+    service: appserver
+    cmd: "vendor/bin/drush"
+  php:
+    service: appserver
+  composer:
+    service: appserver
+    cmd: "composer"
+
+proxy:
+  appserver:
+    - portfolio.lndo.site

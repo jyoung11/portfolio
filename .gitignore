@@ -1,8 +1,21 @@
+# Ignore Composer vendor directory and Drupal core
+docroot/vendor/
+docroot/core/
+
 # Ignore paths that contain user-generated content.
 docroot/files
 docroot/files-private/*
 docroot/sites/*/files
 docroot/sites/*/files-private/*
+
+# Ignore contrib modules and themes that are Composer-managed
+docroot/modules/contrib/
+docroot/themes/contrib/
+
+# Ignore local settings and development services
+docroot/sites/*/settings.local.php
+docroot/sites/development.services.yml
+
 
 # keep .htaccess rules for files-private directory
 !docroot/files-private/.htaccess
@@ -40,3 +53,4 @@ sites/*/files-private/*
 
 # Others
 .idea
+portfolio-jim.sql
