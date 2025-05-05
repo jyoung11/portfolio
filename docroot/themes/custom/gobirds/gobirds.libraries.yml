@@ -1,0 +1,21 @@
+global-css:
+  css:
+    theme:
+      css/style.css: {}     
+
+global-js:
+  js:
+    js/main.js: {} 
+    https://player.vimeo.com/api/player.js: {}         
+  dependencies:
+    - core/jquery
+
+glightbox:
+  version: 1.x
+  css:
+    theme:
+      https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css: {}
+  js:
+    https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js: {}
+  dependencies:
+    - core/jquery

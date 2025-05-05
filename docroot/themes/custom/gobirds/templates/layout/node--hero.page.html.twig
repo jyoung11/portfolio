@@ -1,0 +1,121 @@
+{% if is_mobile() %}
+{% set os = is_ios() %}
+    {% if node.field_hero_mobile_video.value is not empty %}
+        <div id="video-wrapper" class="hero-video-background mobile" data-vimeo-controls="{{ node.field_hero_video_controls.value }}" data-vimeo-idz="{{ node.field_hero_mobile_video.value }}" data-ios="{{ os }}">
+            <div class="video-mobile">
+            {% if is_ios() %}
+                {% if is_ios() == 1 and (node.field_hero_video_controls.value == 0 or node.field_hero_video_controls.value is empty) %}
+                    <video  autoplay muted playsinline id="vimeo-video" poster="{{ file_url(node.field_hero_image_mobile.entity.uri.value) }}">
+                {% else %}
+                    <video id="vimeo-video" style="max-height: 720px; height: {{ node.field_hero_image_mobile.0.height }}px; width: 100%;" poster="{{ file_url(node.field_hero_image_mobile.entity.uri.value) }}">
+                {% endif %}
+            {% else %}
+                <video id="vimeo-video" poster="{{ file_url(node.field_hero_image_mobile.entity.uri.value) }}">
+            {% endif %}
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Custom Controls will be dynamically added based on flags -->
+                    <div id="custom-controls">
+                        <!-- Play/Pause button will be conditionally rendered -->
+                        <button id="play-pause-btn" class="initial" style="display:none;">
+                            <img id="play-pause-icon" src="/themes/custom/gobirds/play-arrow.svg" alt="Play">
+                        </button>
+                        <!-- Mute/Unmute button will be conditionally rendered -->
+                        <button id="mute-unmute-btn" style="display:none;">
+                            <img id="mute-unmute-icon" src="/themes/custom/gobirds/mute.svg" alt="Unmute">
+                        </button>
+                    </div>
+            </div>
+        </div>
+    {% elseif node.field_hero_image_mobile.entity.uri.value is not empty %}
+        <div class="hero-image-background">
+            <div class="image-desktop">
+                <img src="{{ file_url(node.field_hero_image_mobile.entity.uri.value) }}" alt="{{ node.field_hero_image_mobile.entity.alt }}">
+                {% if node.field_hero_image_text_screen.value %}
+                    <div class="screen-layer"></div>
+                {% endif %}
+                <div class="hero-content-container {{ node.field_hero_title_white.value is empty ? 'body-only' : '' }}">
+                    {% if node.field_hero_title_white.value is not empty %}
+                        <h1 class="hero-title">{{ node.field_hero_title_white.value }}
+                            {% if node.field_hero_title_orange.value is not empty %}
+                                <span class="orange">{{ node.field_hero_title_orange.value }}</span>
+                            {% endif %}
+                        </h1>
+                    {% endif %}
+                    {% if node.body.value is not empty %}
+                        <div class="hero-body">
+                            {{ node.body.value|raw }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% elseif node.field_hero_image.entity.uri.value is not empty %}
+        <div class="hero-image-background">
+            <div class="image-desktop">
+                <img src="{{ file_url(node.field_hero_image.entity.uri.value) }}" alt="{{ node.field_hero_image.entity.alt }}">
+                {% if node.field_hero_image_text_screen.value %}
+                    <div class="screen-layer"></div>
+                {% endif %}
+                <div class="hero-content-container {{ node.field_hero_title_white.value is empty ? 'body-only' : '' }}">
+                    {% if node.field_hero_title_white.value is not empty %}
+                        <h1 class="hero-title">{{ node.field_hero_title_white.value }}
+                            {% if node.field_hero_title_orange.value is not empty %}
+                                <span class="orange">{{ node.field_hero_title_orange.value }}</span>
+                            {% endif %}
+                        </h1>
+                    {% endif %}
+                    {% if node.body.value is not empty %}
+                        <div class="hero-body">
+                            {{ node.body.value|raw }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% else %}
+    {% if node.field_hero_desktop_video.value is not empty %}
+        <div id="video-wrapper" class="hero-video-background" data-vimeo-controls="{{ node.field_hero_video_controls.value }}" data-vimeo-idz="{{ node.field_hero_desktop_video.value }}">
+            <div class="video-desktop">
+               <video id="vimeo-video" poster="{{ file_url(node.field_hero_image.entity.uri.value) }}">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Custom Controls will be dynamically added based on flags -->
+                <div id="custom-controls">
+                    <!-- Play/Pause button will be conditionally rendered -->
+                    <button id="play-pause-btn" style="display:none;">
+                        <img id="play-pause-icon" src="/themes/custom/gobirds/play-2.svg" alt="Play">
+                    </button>
+                    <!-- Mute/Unmute button will be conditionally rendered -->
+                    <button id="mute-unmute-btn" style="display:none;">
+                        <img id="mute-unmute-icon" src="/themes/custom/gobirds/mute.svg" alt="Unmute">
+                    </button>
+                </div>
+            </div>
+        </div>
+    {% elseif node.field_hero_image.entity.uri.value is not empty %}
+        <div class="hero-image-background">
+            <div class="image-desktop">
+                <img src="{{ file_url(node.field_hero_image.entity.uri.value) }}" alt="{{ node.field_hero_image.entity.alt }}">
+                {% if node.field_hero_image_text_screen.value %}
+                    <div class="screen-layer"></div>
+                {% endif %}
+                <div class="hero-content-container {{ node.field_hero_title_white.value is empty ? 'body-only' : '' }}">
+                    {% if node.field_hero_title_white.value is not empty %}
+                        <h1 class="hero-title">{{ node.field_hero_title_white.value }}
+                            {% if node.field_hero_title_orange.value is not empty %}
+                                <span class="orange">{{ node.field_hero_title_orange.value }}</span>
+                            {% endif %}
+                        </h1>
+                    {% endif %}
+                    {% if node.body.value is not empty %}
+                        <div class="hero-body">
+                            {{ node.body.value|raw }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endif %}

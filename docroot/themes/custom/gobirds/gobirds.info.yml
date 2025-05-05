@@ -1,0 +1,16 @@
+name: 'gobirds'
+type: theme
+description: 'A custom Drupal theme inspired by Kelly Green greatness.'
+core_version_requirement: ^10 || ^11
+version: 1.x-1.0.0
+base theme: bootstrap5
+libraries:
+  - gobirds/global-css
+  - gobirds/global-js
+
+regions:
+  header: 'Header'
+  hero: 'Hero'
+  content: 'Content'
+  footer: 'Footer'
+  copyright: 'Copyright'

@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ * Theme override to display a media item.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+{{ attach_library('gobirds/glightbox') }}
+{%
+  set classes = [
+    'media',
+    'media--type-' ~ media.bundle()|clean_class,
+    not media.isPublished() ? 'media--unpublished',
+    view_mode ? 'media--view-mode-' ~ view_mode|clean_class,
+  ] %}
+ {% set video_title = content.field_video_title %}
+ {% set video_description = content.field_video_description %}
+ {% set custom_image_url = content.field_custom_image %}
+
+<div{{ attributes.addClass(classes) }}>
+  {{ title_suffix.contextual_links }}
+  {% if content and (custom_image_url is not defined or not custom_image_url) %}
+    {{ content|without('field_video_title', 'field_video_description', 'field_custom_image', 'oembed_url') }}
+  {% else %}
+  <div class="field field--name-field-media-oembed-video field--type-string field--label-hidden field__item">
+    <a title="{{ video_title }}" href="{{ oembed_video }}" data-type="video" aria-controls="glightbox" aria-label="{&quot;alt&quot;:&quot;&quot;}" role="button" data-gallery="gallery-parent-paragraph-" class="glightbox glightbox-media-video">
+        <img src="{{ custom_image_url }}" width="1280" height="718" alt="" loading="lazy" class="img-fluid image-style-ebt-video-and-image-gallery">
+    </a>
+    </div>
+  {% endif %}
+
+    <div class="media-hover-overlay">
+      <div class="media-hover-content">
+        {% if video_title  %}
+          <h2>{{ video_title}}</h2>
+        {% endif %}
+        {% if video_description %}
+          <p>{{ video_description }}</p>
+        {% endif %}
+      </div>
+    </div>
+
+</div>
