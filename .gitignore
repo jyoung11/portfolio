@@ -54,3 +54,4 @@ sites/*/files-private/*
 # Others
 .idea
 portfolio-jim.sql
+.lando.local.yml

@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener("DOMContentLoaded", function () {
     // Check if the #vimeo-video element is present on the page
     const videoElement = document.querySelector("#vimeo-video");
+    
     if (!videoElement) {
         return; // Exit if the element is not found
     }
@@ -40,13 +41,14 @@ document.addEventListener("DOMContentLoaded", function () {
         controls: playerCtrl  // Hide default Vimeo controls
     };
 
-
+    console.log(options);
 
     // Define your Vimeo video ID
     //const vimeoVideoId = "1015292071";  // Replace with actual Vimeo video ID
 
     // Your Vimeo API access token
-    const accessToken = "cdb1d632438615a4d89ce92429fb8c6d";  // Replace with actual OAuth token
+    // const accessToken = "cdb1d632438615a4d89ce92429fb8c6d";  // Replace with actual OAuth token
+     const accessToken = "ffb26bd4639fd57eb99260587ee5c8b7";
 
     // Vimeo API endpoint for the video
     const vimeoApiUrl = `https://api.vimeo.com/videos/${vimeoVideoId}`;
