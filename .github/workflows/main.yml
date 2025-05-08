@@ -30,7 +30,12 @@ jobs:
 
       - name: Sync files to Lightsail
         run: |
-          rsync -avz --delete --exclude 'sites/default/files' -e "ssh -o StrictHostKeyChecking=no" ./docroot/ bitnami@${{ secrets.LIGHTSAIL_IP }}:/home/bitnami/www/portfolio/docroot
+          rsync -avz --delete \
+            --exclude 'sites/default/files' \
+            --exclude 'sites/default/settings.php' \
+            --exclude 'sites/default/settings.local.php' \
+            -e "ssh -o StrictHostKeyChecking=no" \
+            ./docroot/ ${{ secrets.LIGHTSAIL_USER }}@${{ secrets.LIGHTSAIL_IP }}:/home/bitnami/www/portfolio/docroot
         env:
           SSH_AUTH_SOCK: ${{ env.SSH_AUTH_SOCK }}
 
