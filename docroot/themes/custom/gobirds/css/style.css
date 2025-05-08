@@ -212,7 +212,7 @@ a.no-under:hover {
 
 .region-header.scrolled #block-gobirds-site-branding .navbar-brand .site-logo img,
 body.is-mobile .region-header #block-gobirds-site-branding .navbar-brand .site-logo img {
-    content: url('/themes/custom/gobirds/logo-bg.png');
+    content: url('/themes/custom/gobirds/logo.png');
 }
 body.is-mobile #block-gobirds-site-branding .navbar-brand .site-logo img {
     height: 85px;
