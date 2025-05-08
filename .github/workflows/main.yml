@@ -1,0 +1,49 @@
+name: Deploy to Lightsail
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy Drupal site to Lightsail
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up SSH key
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.LIGHTSAIL_SSH_KEY }}
+
+      - name: Install rsync
+        run: sudo apt-get update && sudo apt-get install -y rsync
+
+      # Optional: Backup remote docroot (disabled for now)
+      # - name: Backup remote docroot (pre-deploy)
+      #   run: |
+      #     ssh -o StrictHostKeyChecking=no bitnami@${{ secrets.LIGHTSAIL_HOST }} \
+      #     'cd /home/bitnami/www && tar -czf backup-docroot-$(date +%F-%T).tar.gz portfolio/docroot'
+
+      - name: Sync files to Lightsail
+        run: |
+          rsync -avz --delete --exclude 'sites/default/files' ./docroot/ bitnami@${{ secrets.LIGHTSAIL_HOST }}:/home/bitnami/www/portfolio/docroot
+
+      - name: Run composer install on server
+        run: |
+          ssh -o StrictHostKeyChecking=no bitnami@${{ secrets.LIGHTSAIL_HOST }} \
+          'cd /home/bitnami/www/portfolio/docroot && composer install --no-dev --optimize-autoloader'
+
+      - name: Clear Drupal cache
+        run: |
+          ssh -o StrictHostKeyChecking=no bitnami@${{ secrets.LIGHTSAIL_HOST }} \
+          'cd /home/bitnami/www/portfolio/docroot && drush cr'
+
+      # Optional: Backup DB (disabled for now)
+      # - name: Backup database (pre-deploy)
+      #   run: |
+      #     ssh -o StrictHostKeyChecking=no bitnami@${{ secrets.LIGHTSAIL_HOST }} \
+      #     'mysqldump -uYOUR_DB_USER -pYOUR_DB_PASS portfolio > backup-db-$(date +%F-%T).sql'
