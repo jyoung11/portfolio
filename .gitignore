@@ -55,3 +55,4 @@ sites/*/files-private/*
 .idea
 portfolio-jim.sql
 .lando.local.yml
+backups/
