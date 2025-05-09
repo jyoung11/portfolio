@@ -837,7 +837,8 @@ footer .container {
 }
 
 .region-footer .region-inner nav a:hover {
-    color: #000; /* Change color on hover */
+    color: #fff; /* Change color on hover */
+    text-decoration: underline;
 }
 
 #footer-logo-container {
