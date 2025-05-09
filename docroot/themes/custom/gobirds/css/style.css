@@ -693,6 +693,7 @@ nav.tbm--mobile-show {
     background-image: url('/themes/custom/gobirds/down-arrow.svg');
     background-size: contain;
     background-repeat: no-repeat;
+    background-color: #ced1d9;
     margin-right: 8px; /* Adjust the margin as needed */
     margin-top: 3px; /* Adjust the margin as needed */
     vertical-align: middle; /* Align the icon vertically with the text */
@@ -707,6 +708,7 @@ nav.tbm--mobile-show {
     background-image: url('/themes/custom/gobirds/up-arrow.svg');
     background-size: contain;
     background-repeat: no-repeat;
+    background-color: #ced1d9;
     margin-right: 8px; /* Adjust the margin as needed */
     vertical-align: middle; /* Align the icon vertically with the text */
     border-radius: 0;
@@ -728,7 +730,7 @@ nav.tbm--mobile-show {
     font-weight: normal;
 }
 .ebt-accordion-plus_minus_left .ui-accordion .ui-accordion-content {
-    background-color: #000;
+    background-color: transparent;
     color: #000;
     font-size: 1.0rem;
     font-weight: normal;
