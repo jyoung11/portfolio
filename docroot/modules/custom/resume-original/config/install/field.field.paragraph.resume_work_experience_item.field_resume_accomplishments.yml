@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.resume_work_experience_item
+    - field.storage.paragraph.field_resume_accomplishments
+id: paragraph.resume_work_experience_item.field_resume_accomplishments
+field_name: field_resume_accomplishments
+entity_type: paragraph
+bundle: resume_experience_item
+label: 'Work Accomplishments'
+description: 'Add project highlights or key responsibilities from this role.'
+required: false
+translatable: true
+default_value: [ ]
+default_value_callback: ''
+settings:
+  handler: default:paragraph
+  handler_settings:
+    target_bundles:
+      highlight_item: resume_highlight_item
+    sort:
+      field: _none
+      direction: ASC
+field_type: entity_reference_revisions
+module: paragraph

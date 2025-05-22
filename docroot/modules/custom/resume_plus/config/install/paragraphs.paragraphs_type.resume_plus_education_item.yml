@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: resume_plus_education_item
+label: 'Education Item'
+description: 'An entry for a school, degree, and graduation date.'
+revision: true
+hierarchical: false
+translatable: false
+provider: paragraphs

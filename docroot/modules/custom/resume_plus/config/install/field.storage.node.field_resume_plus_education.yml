@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies: {  }
+id: node.field_resume_plus_education
+field_name: field_resume_plus_education
+entity_type: node
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+  handler: default:paragraph
+  handler_settings:
+    target_bundles:
+      education_item: resume_plus_education_item
+    sort:
+      field: _none
+      direction: ASC
+module: paragraph
+locked: false
+cardinality: -1
+translatable: true
+persist_with_no_fields: false
+custom_storage: false

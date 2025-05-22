@@ -1,0 +1,202 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.resume_plus.field_resume_plus_education
+    - field.field.node.resume_plus.field_resume_plus_email
+    - field.field.node.resume_plus.field_resume_plus_full_name
+    - field.field.node.resume_plus.field_resume_plus_highlights
+    - field.field.node.resume_plus.field_resume_plus_phone
+    - field.field.node.resume_plus.field_resume_plus_skills_header
+    - field.field.node.resume_plus.field_resume_plus_skills_list
+    - field.field.node.resume_plus.field_resume_plus_summary_header
+    - field.field.node.resume_plus.field_resume_plus_summary_text
+    - field.field.node.resume_plus.field_resume_plus_work_exp
+    - node.type.resume_plus
+id: node.resume_plus.default
+targetEntityType: node
+bundle: resume_plus
+mode: default
+content:
+  group_resume_main_tabs:
+    type: group
+    group_name: group_resume_main_tabs
+    label: 'Resume Sections'
+    format_type: horizontal_tabs
+    parent_name: content
+    weight: 0
+  field_resume_plus_education:
+    type: paragraphs
+    weight: 4
+    settings:
+      title: 'Education'
+    third_party_settings:
+      field_group:
+        parent_name: ''
+        weight: 4
+        region: content
+        group_name: resume_education
+  field_resume_plus_email:
+    type: email_default
+    weight: 1
+    settings: { }
+    third_party_settings:
+      field_group:
+        parent_name: ''
+        weight: 1
+        region: content
+        group_name: resume_contact
+  field_resume_plus_full_name:
+    type: string_textfield
+    weight: -5
+    settings: { }
+    third_party_settings:
+      field_group:
+        parent_name: ''
+        weight: -5
+        region: content
+        group_name: resume_header
+  field_resume_plus_highlights:
+    type: paragraphs
+    weight: 5
+    settings:
+      title: 'Highlights'
+    third_party_settings:
+      field_group:
+        parent_name: ''
+        weight: 5
+        region: content
+        group_name: resume_highlights
+  field_resume_plus_phone:
+    type: telephone_default
+    weight: 2
+    settings: { }
+    third_party_settings:
+      field_group:
+        parent_name: ''
+        weight: 2
+        region: content
+        group_name: resume_contact
+  field_resume_plus_skills_header:
+    type: string_textfield
+    weight: 6
+    settings: { }
+    third_party_settings:
+      field_group:
+        parent_name: ''
+        weight: 6
+        region: content
+        group_name: resume_skills
+  field_resume_plus_skills_list:
+    type: string_textfield
+    weight: 7
+    settings: { }
+    third_party_settings:
+      field_group:
+        parent_name: ''
+        weight: 7
+        region: content
+        group_name: resume_skills
+  field_resume_plus_summary_header:
+    type: string_textfield
+    weight: 8
+    settings: { }
+    third_party_settings:
+      field_group:
+        parent_name: ''
+        weight: 8
+        region: content
+        group_name: resume_summary
+  field_resume_plus_summary_text:
+    type: text_textarea
+    weight: 9
+    settings:
+      rows: 5
+    third_party_settings:
+      field_group:
+        parent_name: ''
+        weight: 9
+        region: content
+        group_name: resume_summary
+  field_resume_plus_work_exp:
+    type: paragraphs
+    weight: 10
+    settings:
+      title: 'Work Experience'
+    third_party_settings:
+      field_group:
+        parent_name: ''
+        weight: 10
+        region: content
+        group_name: resume_work
+hidden:
+  body: true
+third_party_settings:
+  field_group:
+    resume_header:
+      children:
+        - field_resume_plus_full_name
+      format_type: horizontal_tabs
+      label: 'Personal Information'
+      format_settings:
+        classes: ''
+      parent_name: ''
+      weight: -10
+    resume_contact:
+      children:
+        - field_resume_plus_email
+        - field_resume_plus_phone
+      format_type: horizontal_tabs
+      label: 'Contact'
+      type: group
+      parent_name: content
+      format_settings:
+        classes: ''
+      weight: 0
+    resume_summary:
+      children:
+        - field_resume_plus_summary_header
+        - field_resume_plus_summary_text
+      format_type: horizontal_tabs
+      label: 'Summary'
+      format_settings:
+        classes: ''
+      parent_name: ''
+      weight: 1
+    resume_skills:
+      children:
+        - field_resume_plus_skills_header
+        - field_resume_plus_skills_list
+      format_type: horizontal_tabs
+      label: 'Skills'
+      format_settings:
+        classes: ''
+      parent_name: ''
+      weight: 2
+    resume_education:
+      children:
+        - field_resume_plus_education
+      format_type: horizontal_tabs
+      label: 'Education'
+      format_settings:
+        classes: ''
+      parent_name: ''
+      weight: 3
+    resume_highlights:
+      children:
+        - field_resume_plus_highlights
+      format_type: horizontal_tabs
+      label: 'Highlights'
+      format_settings:
+        classes: ''
+      parent_name: ''
+      weight: 4
+    resume_work:
+      children:
+        - field_resume_plus_work_exp
+      format_type: horizontal_tabs
+      label: 'Work Experience'
+      format_settings:
+        classes: ''
+      parent_name: ''
+      weight: 5

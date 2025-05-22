@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies: {  }
+id: paragraph.field_resume_image
+uuid: 0a2b3c4d-5e6f-7a8b-9c0d-e1f2g3h4i5j6
+field_name: field_resume_image
+entity_type: paragraph
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: null
+module: image
+provider: image
+locked: false
+cardinality: -1
+translatable: true
+persist_with_no_fields: false
+custom_storage: false

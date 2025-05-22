@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.resume_plus
+    - field.storage.node.field_resume_plus_skills_header
+id: node.resume_plus.field_resume_plus_skills_header
+field_name: field_resume_plus_skills_header
+entity_type: node
+bundle: resume_plus
+label: 'Skills Section Header'
+description: 'Custom title for the skills or hobbies section.'
+required: false
+translatable: false
+default_value: [ ]
+default_value_callback: ''
+settings: {  }
+field_type: string
+module: core

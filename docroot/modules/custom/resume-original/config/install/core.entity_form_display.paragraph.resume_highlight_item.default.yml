@@ -1,0 +1,62 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.resume_highlight_item
+    - field.storage.paragraph.field_resume_highlight_title
+    - field.storage.paragraph.field_resume_highlight_desc
+    - field.storage.paragraph.field_resume_image
+    - field.storage.paragraph.field_resume_video
+    - field.storage.paragraph.field_resume_url
+    - field.storage.paragraph.field_resume_files
+id: paragraph.resume_highlight_item.default
+targetEntityType: paragraph
+bundle: resume_highlight_item
+mode: default
+content:
+  field_resume_highlight_title:
+    type: string_textfield
+    weight: 0
+    settings: { }
+    third_party_settings: { }
+  field_resume_highlight_desc:
+    type: text_textarea_with_summary
+    weight: 1
+    settings:
+      rows: 9
+    third_party_settings:
+      editor:
+        format: full_html
+  field_resume_image:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      autocomplete_type: tags
+    third_party_settings: { }
+  field_resume_video:
+    type: entity_reference_autocomplete
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      autocomplete_type: tags
+      placeholder: ''
+    third_party_settings: { }
+  field_resume_url:
+    type: link_default
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: { }
+  field_resume_files:
+    type: file_generic
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      display_field: true
+      display_default: false
+    third_party_settings: { }
+hidden: { }

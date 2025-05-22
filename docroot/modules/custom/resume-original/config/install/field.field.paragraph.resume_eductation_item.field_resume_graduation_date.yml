@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.resume_education_item
+    - field.storage.paragraph.field_resume_graduation_date
+id: paragraph.resume_education_item.field_resume_graduation_date
+field_name: field_resume_graduation_date
+entity_type: paragraph
+bundle: resume_education_item
+label: 'Graduation Date'
+description: 'The date of graduation.'
+required: false
+translatable: false
+default_value: [ ]
+default_value_callback: ''
+settings:
+  datetime_type: date
+field_type: datetime
+module: datetime

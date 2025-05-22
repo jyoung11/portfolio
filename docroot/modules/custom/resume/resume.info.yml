@@ -1,0 +1,15 @@
+name: 'Resume'
+type: module
+description: 'A custom Drupal module that provides a fully structured resume content type with grouped paragraph sections.'
+core_version_requirement: ^10 | ^11
+package: Custom
+dependencies:
+  - node
+  - field
+  - text
+  - file
+  - media
+  - paragraphs
+  - svg_sanitizer
+  - field_group
+  - telephone

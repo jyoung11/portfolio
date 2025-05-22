@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.resume_plus_work_exp_item
+id: paragraph.resume_plus_work_exp_item.default
+targetEntityType: paragraph
+bundle: resume_plus_work_exp_item
+mode: default
+content:
+  field_resume_plus_company_name:
+    type: string_textfield
+    weight: 0
+    settings: { }
+    third_party_settings: { }
+  field_resume_plus_job_title:
+    type: string_textfield
+    weight: 5
+    settings: { }
+    third_party_settings: { }
+  field_resume_plus_is_current:
+    type: boolean_checkbox
+    weight: 10
+    settings: { }
+    third_party_settings: { }
+  field_resume_plus_start_date:
+    type: datetime_default
+    weight: 15
+    settings: { }
+    third_party_settings: { }
+  field_resume_plus_end_date:
+    type: datetime_default
+    weight: 20
+    settings: { }
+    third_party_settings: { }
+  field_resume_plus_work_accomplish:
+    type: entity_reference_revisions_paragraphs
+    weight: 25
+    settings:
+      title: 'Add accomplishments'
+    third_party_settings: { }
+hidden: { }

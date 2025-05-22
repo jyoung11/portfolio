@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies: {  }
+id: paragraph.field_resume_plus_is_current
+field_name: field_resume_plus_is_current
+entity_type: paragraph
+type: boolean
+settings:
+  on_label: 'Currently employed'
+  off_label: ''
+module: options
+locked: false
+cardinality: 1
+translatable: false
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.resume_plus_work_exp_item
+    - field.storage.paragraph.field_resume_plus_company_name
+id: paragraph.resume_plus_work_exp_item.field_resume_plus_company_name
+field_name: field_resume_plus_company_name
+entity_type: paragraph
+bundle: resume_plus_work_exp_item
+label: 'Company Name'
+description: 'The name of the organization where this work experience occurred.'
+required: true
+translatable: true
+default_value: [ ]
+default_value_callback: ''
+settings: {  }
+field_type: string
+module: core

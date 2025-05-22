@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Resume module.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function resume_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.resume':
+      return \Drupal::translation()->translate('Provides a customizable resume builder for portfolio purposes.');
+  }
+}

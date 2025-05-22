@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.resume_highlight_item
+    - field.storage.paragraph.field_resume_highlight_desc
+id: paragraph.resume_highlight_item.field_resume_highlight_desc
+field_name: field_resume_highlight_desc
+entity_type: paragraph
+bundle: resume_highlight_item
+label: 'Highlight Description'
+description: 'Optional full description to show when expanded.'
+required: false
+translatable: true
+default_value: [ ]
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_long
+module: text

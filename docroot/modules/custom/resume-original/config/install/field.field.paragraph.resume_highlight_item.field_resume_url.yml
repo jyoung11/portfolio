@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.resume_highlight_item
+    - field.storage.paragraph.field_resume_url
+id: paragraph.resume_highlight_item.field_resume_url
+field_name: resume_field_url
+entity_type: paragraph
+bundle: resume_highlight_item
+label: 'URL'
+description: 'Optional external link related to this highlight.'
+required: false
+translatable: true
+default_value: [ ]
+default_value_callback: ''
+settings:
+  link_type: external
+  title: 1
+field_type: link
+module: link

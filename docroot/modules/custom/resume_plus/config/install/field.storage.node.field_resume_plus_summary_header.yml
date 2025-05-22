@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies: {  }
+id: node.field_resume_plus_summary_header
+field_name: field_resume_plus_summary_header
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: false
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,13 @@
+# config/install/node.type.resume.yml
+langcode: en
+status: true
+dependencies: {  }
+id: resume
+uuid: E1568437-166C-4591-8F88-AAB495AFE83A
+label: 'Resume'
+description: 'A custom resume structure with customizable grouped sections to highlight work examples.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false
+translatable: false

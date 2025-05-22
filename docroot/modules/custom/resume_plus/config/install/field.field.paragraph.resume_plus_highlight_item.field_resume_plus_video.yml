@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.resume_plus_highlight_item
+    - field.storage.paragraph.field_resume_plus_video
+    - media.type.remote_video
+id: paragraph.resume_plus_highlight_item.field_resume_plus_video
+field_name: field_resume_plus_video
+entity_type: paragraph
+bundle: resume_plus_highlight_item
+label: 'Video'
+description: 'Optional video associated with this highlight.'
+required: false
+translatable: true
+default_value: [ ]
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings:
+    target_bundles:
+      video: remote_video
+    sort:
+      field: _none
+      direction: ASC
+field_type: entity_reference
+module: core

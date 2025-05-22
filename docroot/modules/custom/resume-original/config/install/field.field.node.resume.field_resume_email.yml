@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.resume
+    - field.storage.node.field_resume_email
+id: node.resume.field_resume_email
+field_name: field_resume_email
+entity_type: node
+bundle: resume
+label: 'Email'
+description: 'Your email address.'
+required: true
+translatable: false
+default_value: [ ]
+default_value_callback: ''
+settings: {  }
+field_type: email
+module: email

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.resume
+    - field.storage.node.field_resume_skills_list
+id: node.resume.field_resume_skills_list
+field_name: field_resume_skills_list
+entity_type: node
+bundle: resume
+label: 'Skills and Hobbies'
+description: 'List of professional skills and personal hobbies.'
+required: false
+translatable: false
+default_value: [ ]
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_long
+module: text

@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_resume_plus_hl_title
+    - field.storage.paragraph.field_resume_plus_hl_desc
+    - field.storage.paragraph.field_resume_plus_video
+    - field.storage.paragraph.field_resume_plus_url
+    - field.storage.paragraph.field_resume_plus_files
+    - field.storage.paragraph.field_resume_plus_image
+id: resume_plus_highlight_item
+label: 'Highlight Item'
+description: 'Expandable resume project or professional highlight.'
+revision: true
+hierarchical: false
+translatable: false
+provider: paragraphs

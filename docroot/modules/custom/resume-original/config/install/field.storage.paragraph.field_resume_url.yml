@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies: {  }
+id: paragraph.field_resume_url
+uuid: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx4
+field_name: field_resume_url
+entity_type: paragraph
+type: link
+settings:
+  link_type: external
+  title: 1
+module: link
+locked: false
+cardinality: 1
+translatable: true
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.resume_plus_education_item
+    - field.storage.paragraph.field_resume_plus_degree
+id: paragraph.resume_plus_education_item.field_resume_plus_degree
+field_name: field_resume_plus_degree
+entity_type: paragraph
+bundle: resume_plus_education_item
+label: 'Degree or Major'
+description: 'The degree received or major studied.'
+required: true
+translatable: true
+default_value: [ ]
+default_value_callback: ''
+settings: {  }
+field_type: string
+module: core

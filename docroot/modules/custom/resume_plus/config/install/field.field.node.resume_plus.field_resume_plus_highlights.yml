@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.resume_plus
+    - field.storage.node.field_resume_plus_highlights
+id: node.resume_plus.field_resume_plus_highlights
+field_name: field_resume_plus_highlights
+entity_type: node
+bundle: resume_plus
+label: 'Highlights'
+description: 'Projects, case studies, or accomplishments.'
+required: false
+translatable: true
+default_value: [ ]
+default_value_callback: ''
+settings:
+  handler: default:paragraph
+  handler_settings:
+    target_bundles:
+      resume_plus_highlight_item: resume_plus_highlight_item
+    sort:
+      field: _none
+      direction: ASC
+field_type: entity_reference_revisions
+module: paragraph

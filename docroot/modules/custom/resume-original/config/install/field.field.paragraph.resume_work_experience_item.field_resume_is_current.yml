@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.resume_work_experience_item
+    - field.storage.paragraph.field_resume_is_current
+id: paragraph.resume_work_experience_item.field_resume_is_current
+field_name: field_resume_is_current
+entity_type: paragraph
+bundle: resume_work_experience_item
+label: 'Currently Employed'
+description: 'Check this if you are still currently working at this job.'
+required: false
+translatable: false
+default_value: [ ]
+default_value_callback: ''
+settings:
+  on_label: 'Currently employed'
+  off_label: ''
+field_type: boolean
+module: options

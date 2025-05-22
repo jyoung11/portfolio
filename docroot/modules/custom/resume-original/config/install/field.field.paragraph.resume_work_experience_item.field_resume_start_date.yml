@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.resume_work_experience_item
+    - field.storage.paragraph.field_resume_start_date
+id: paragraph.resume_work_experience_item.field_resume_start_date
+field_name: field_resume_start_date
+entity_type: paragraph
+bundle: resume_work_experience_item
+label: 'Start Date'
+description: 'The date this job began.'
+required: true
+translatable: false
+default_value: [ ]
+default_value_callback: ''
+settings:
+  datetime_type: date
+field_type: datetime
+module: datetime

@@ -1,0 +1,16 @@
+name: 'Resume Plus'
+description: 'A custom Drupal module that provides a fully structured resume content type with grouped paragraph sections.'
+package: Custom
+
+type: module
+core_version_requirement: ^10 | ^11
+dependencies:
+  - node
+  - field
+  - text
+  - file
+  - media
+  - paragraphs
+  - svg_sanitizer
+  - field_group
+  - telephone

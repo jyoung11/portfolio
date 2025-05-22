@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.resume
+    - field.storage.node.field_resume_summary_header
+id: node.resume.field_resume_summary_header
+field_name: field_resume_summary_header
+entity_type: node
+bundle: resume
+label: 'Summary Header'
+description: 'Optional custom header for the summary section.'
+required: false
+translatable: false
+default_value: [ ]
+default_value_callback: ''
+settings: {  }
+field_type: string
+module: core

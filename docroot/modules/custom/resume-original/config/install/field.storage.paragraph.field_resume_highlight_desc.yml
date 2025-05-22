@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies: {  }
+id: paragraph.field_resume_highlight_desc
+uuid: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx2
+field_name: field_resume_highlight_desc
+entity_type: paragraph
+type: text_long
+settings:
+  case_sensitive: false
+module: text
+locked: false
+cardinality: 1
+translatable: true
+persist_with_no_fields: false
+custom_storage: false

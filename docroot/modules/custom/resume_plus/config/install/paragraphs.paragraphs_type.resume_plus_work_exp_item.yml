@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  - field.storage.paragraph.field_resume_plus_company_name
+  - field.storage.paragraph.field_resume_plus_job_title
+  - field.storage.paragraph.field_resume_plus_start_date
+  - field.storage.paragraph.field_resume_plus_end_date
+  - field.storage.paragraph.field_resume_plus_accomplish
+id: resume_plus_work_exp_item
+label: 'Work Experience Item'
+description: 'A single work experience entry with company name, dates, and accomplishments.'
+revision: true
+hierarchical: false
+translatable: false
+provider: paragraphs

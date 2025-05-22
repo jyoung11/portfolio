@@ -1,0 +1,171 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.resume
+    - field.field.node.resume.field_resume_full_name
+    - field.field.node.resume.field_resume_email
+    - field.field.node.resume.field_resume_phone
+    - field.field.node.resume.field_resume_summary_header
+    - field.field.node.resume.field_resume_summary_text
+    - field.field.node.resume.field_resume_highlights
+    - field.field.node.resume.field_resume_work_experience
+    - field.field.node.resume.field_resume_education
+    - field.field.node.resume.field_resume_skills_list
+    - field.field.node.resume.field_resume_skills_header
+id: node.resume.default
+targetEntityType: node
+bundle: resume
+mode: default
+content:
+  field_resume_full_name:
+    type: string_textfield
+    weight: 0
+    settings: { }
+    third_party_settings:
+      field_group:
+        group_name: personal_info
+  field_resume_email:
+    type: email_default
+    weight: 1
+    settings: { }
+    third_party_settings:
+      field_group:
+        group_name: personal_info
+  field_resume_phone:
+    type: telephone_default
+    weight: 2
+    settings: { }
+    third_party_settings:
+      field_group:
+        group_name: personal_info
+  field_resume_summary_header:
+    type: string_textfield
+    weight: 3
+    settings: { }
+    third_party_settings:
+      field_group:
+        group_name: summary
+  field_resume_summary_text:
+    type: text_textarea_with_summary
+    weight: 4
+    settings:
+      rows: 9
+    third_party_settings:
+      editor:
+        format: full_html
+      field_group:
+        group_name: summary
+  field_resume_resume_highlights:
+    type: entity_reference_revisions_paragraphs
+    weight: 5
+    settings:
+      title: 'Add highlight'
+    third_party_settings:
+      field_group:
+        group_name: highlights
+  field_resume_work_experience:
+    type: entity_reference_revisions_paragraphs
+    weight: 6
+    settings:
+      title: 'Add job experience'
+    third_party_settings:
+      field_group:
+        group_name: work_experience
+  field_resume_education:
+    type: entity_reference_revisions_paragraphs
+    weight: 7
+    settings:
+      title: 'Add education entry'
+    third_party_settings:
+      field_group:
+        group_name: education
+  field_resume_skills_list:
+    type: text_textarea_with_summary
+    weight: 9
+    settings:
+      rows: 6
+    third_party_settings:
+      editor:
+        format: full_html
+      field_group:
+        group_name: skills
+hidden: { }
+third_party_settings:
+  field_group:
+    personal_info:
+      children:
+        - field_resume_full_name
+        - field_resume_email
+        - field_resume_phone
+      format_type: tabs
+      label: 'Personal Information'
+      format_settings:
+        label: 'above'
+        required_fields: true
+        description: ''
+        classes: 'group-personal-info'
+        description_display: 'before'
+      weight: -10
+    summary:
+      children:
+        - field_resume_summary_header
+        - field_resume_summary_text
+      format_type: tabs
+      label: 'Summary'
+      format_settings:
+        label: 'above'
+        required_fields: false
+        description: ''
+        classes: 'group-summary'
+        description_display: 'before'
+      weight: -5
+    highlights:
+      children:
+        - field_resume_resume_highlights
+      format_type: tabs
+      label: 'Highlights'
+      format_settings:
+        label: 'above'
+        required_fields: false
+        description: ''
+        classes: 'group-highlights'
+        description_display: 'before'
+      weight: 0
+    work_experience:
+      children:
+        - field_resume_work_experience
+      format_type: tabs
+      label: 'Work Experience'
+      format_settings:
+        label: 'above'
+        required_fields: false
+        description: ''
+        classes: 'group-work-experience'
+        description_display: 'before'
+      weight: 5
+    education:
+      children:
+        - field_resume_education
+      format_type: tabs
+      label: 'Education'
+      format_settings:
+        label: 'above'
+        required_fields: false
+        description: ''
+        classes: 'group-education'
+        description_display: 'before'
+      weight: 10
+    skills:
+      children:
+        - field_resume_skills_header
+        - field_resume_skills_list
+      format_type: tabs
+      label: 'Skills & Hobbies'
+      format_settings:
+        label: 'above'
+        required_fields: false
+        description: ''
+        classes: 'group-skills'
+        description_display: 'before'
+      weight: 15

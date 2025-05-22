@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.resume_plus
+    - field.storage.node.field_resume_plus_phone
+id: node.resume.field_resume_plus_phone
+field_name: field_resume_plus_phone
+entity_type: node
+bundle: resume_plus
+label: 'Phone Number'
+description: 'Your phone number.'
+required: false
+translatable: false
+default_value: [ ]
+default_value_callback: ''
+settings: {  }
+field_type: telephone
+module: telephone

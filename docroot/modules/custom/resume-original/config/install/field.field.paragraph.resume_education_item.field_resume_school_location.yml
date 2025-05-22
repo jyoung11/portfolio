@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.resume_education_item
+    - field.storage.paragraph.field_resume_school_location
+id: paragraph.resume_education_item.field_resume_school_location
+field_name: field_resume_school_location
+entity_type: paragraph
+bundle: resume_education_item
+label: 'School Location'
+description: 'The city and state (or region) of the institution.'
+required: false
+translatable: true
+default_value: [ ]
+default_value_callback: ''
+settings: {  }
+field_type: string
+module: core
